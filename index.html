@@ -524,6 +524,21 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
 /* next-project card */
 .flip__face--cta{background:linear-gradient(150deg,rgba(58,215,242,.18),rgba(139,123,255,.16) 60%,#0a111c);border:1px solid rgba(58,215,242,.5)}
 .lab__more{display:flex;justify-content:center;margin-top:26px}
+/* automation demos */
+.autos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:clamp(50px,7vw,90px)}
+.autos__head{grid-column:1/-1;display:grid;gap:8px;max-width:62ch}
+.autos__head h3{font-family:var(--font-d);font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.05}
+.autos__head p{color:var(--fg-2)}
+.auto{display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.auto__shot{position:relative;display:block;margin:14px 14px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line-2);perspective:1000px;background:var(--bg-3)}
+.auto__shot img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;transform:rotateX(0) scale(1);transform-origin:50% 0;transition:transform .7s var(--ease)}
+.auto:hover .auto__shot img,.auto__shot:focus-visible img{transform:rotateX(6deg) scale(1.03)}
+.auto__badge{position:absolute;bottom:12px;left:12px;font-family:var(--font-m);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:rgba(7,11,18,.88);border:1px solid rgba(58,215,242,.5);color:var(--cyan)}
+.auto__body{display:grid;gap:14px;padding:20px 22px 24px;flex:1;align-content:start}
+.auto__body h3{font-family:var(--font-d);font-weight:700;font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1;text-shadow:0 1px 0 #24a8c0,0 2px 0 #1a869a,0 12px 24px rgba(0,0,0,.5)}
+.auto__body p{color:var(--fg-2)}
+.auto__body .case__links{margin-top:auto;padding-top:4px}
+@media (max-width:820px){.autos{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -748,6 +763,51 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
         </ul>
         <div class="tags" data-r="right" style="--d:320ms"><span class="tag tag--hot">n8n</span><span class="tag tag--hot">Claude API</span><span class="tag">WebGL / Canvas 3D</span><span class="tag">Wazuh</span><span class="tag">Suricata</span><span class="tag">Docker</span></div>
       </div>
+    </div>
+    <div class="autos">
+      <div class="autos__head" data-r="up">
+        <span class="kicker">n8n automation · live demos</span>
+        <h3>Automations you can try right now</h3>
+        <p>Both run the real workflow logic in your browser. The n8n workflow files plug into Claude, Google Sheets, email, Slack and Discord.</p>
+      </div>
+      <article class="auto card" data-r="left">
+        <a class="auto__shot" href="nour/" aria-label="Open the Nour live demo">
+          <img src="assets/nour-cover.jpg" alt="Nour chatbot booking a dental appointment in Arabic beside the clinic page" width="1200" height="750" loading="lazy">
+          <span class="auto__badge">Live demo</span>
+        </a>
+        <div class="auto__body">
+          <div class="kicker">AI chatbot · Arabic + English</div>
+          <h3>Nour</h3>
+          <p>A bilingual AI receptionist for a dental clinic. It answers from the clinic's own facts, books appointments step by step and hands urgent cases to the front desk.</p>
+          <ul class="bullets">
+            <li>Egyptian Arabic and English, chosen per message</li>
+            <li>4-step booking with mobile validation and a booking reference</li>
+            <li>Reception inbox for bookings, hand-offs and full conversations</li>
+            <li>Claude for open questions, guarded against prompt injection, with a rules fallback</li>
+          </ul>
+          <div class="tags"><span class="tag tag--hot">n8n</span><span class="tag tag--hot">Claude API</span><span class="tag">RTL UI</span><span class="tag">Discord alerts</span></div>
+          <div class="case__links"><a class="btn btn--primary mag" href="nour/">Try the live demo ↗</a></div>
+        </div>
+      </article>
+      <article class="auto card" data-r="right" style="--d:100ms">
+        <a class="auto__shot" href="leadflow/" aria-label="Open the LeadFlow live demo">
+          <img src="assets/leadflow-cover.jpg" alt="LeadFlow quote form with a 3D roof filling with solar panels as the bill changes" width="1200" height="750" loading="lazy">
+          <span class="auto__badge">Live demo</span>
+        </a>
+        <div class="auto__body">
+          <div class="kicker">Sales automation · AI lead scoring</div>
+          <h3>LeadFlow</h3>
+          <p>Lead qualification for a solar installer. Every form entry is checked, scored 0–100 with clear reasons, priced, routed to the right rep and followed up automatically.</p>
+          <ul class="bullets">
+            <li>Spam, duplicate and rate-limit checks before anything is saved</li>
+            <li>Instant estimate with a live 3D roof that fills with panels</li>
+            <li>Sales pipeline with drag and drop, call-back deadlines and notes</li>
+            <li>Google Sheets, auto-reply email, Slack alerts and a Monday report</li>
+          </ul>
+          <div class="tags"><span class="tag tag--hot">n8n</span><span class="tag tag--hot">Claude API</span><span class="tag">Google Sheets</span><span class="tag">Slack</span><span class="tag">Canvas 3D</span></div>
+          <div class="case__links"><a class="btn btn--primary mag" href="leadflow/">Try the live demo ↗</a></div>
+        </div>
+      </article>
     </div>
     <div class="prods">
       <div data-r="left"><div class="flip" tabindex="0" role="button" aria-label="Specialist, flip for details">
@@ -1100,10 +1160,10 @@ var esc = function(s){ return String(s).replace(/[&<>]/g, function(c){ return { 
 var line = function(cls, txt, raw){ out.insertAdjacentHTML('beforeend', '<span class="' + cls + '">' + (raw ? txt : esc(txt)) + '</span>\n'); out.scrollTop = out.scrollHeight; };
 var sections = ['services','work','lab','process','skills','about','experience','arena','contact'];
 var CMDS = {
-  help: [['w','available commands'],['','  whoami      who is behind the keyboard'],['','  services    what I build for clients'],['','  projects    infinity consulting growth, sentinelflow, specialist'],['','  lab         open the live 3d demos'],['','  skills      the stack'],['','  exp         experience & education'],['','  ctf         platforms & ranks'],['','  contact     email & whatsapp'],['','  cv          open the résumé'],['','  cd <sec>    jump to a section ('+ sections.join(', ') +')'],['','  clear       clear the screen']],
+  help: [['w','available commands'],['','  whoami      who is behind the keyboard'],['','  services    what I build for clients'],['','  projects    icg, sentinelflow, nour, leadflow'],['','  lab         open the live 3d demos'],['','  skills      the stack'],['','  exp         experience & education'],['','  ctf         platforms & ranks'],['','  contact     email & whatsapp'],['','  cv          open the résumé'],['','  cd <sec>    jump to a section ('+ sections.join(', ') +')'],['','  clear       clear the screen']],
   whoami: [['w','youssef mohamed salama'],['','3d websites · apps · ai automation · cyber security · egypt'],['','b.sc. computer engineering (cyber security), ksiu 2026'],['k','[+] status: available for freelance projects']],
   services: [['w','3d websites'],['','  immersive pages and product showcases in real-time 3d'],['w','web & mobile apps'],['','  portals and resident apps: qr access, payments, live requests'],['w','interactive 3d experiences'],['','  configurators, 3d dashboards, site models'],['w','n8n automation'],['','  workflows between your apps, with retries and error alerts'],['w','ai agents & chatbots'],['','  english + arabic assistants that answer from your docs'],['w','security automation & testing'],['','  soc alert triage, auto-response, pentests']],
-  projects: [['w','infinity consulting growth'],['','  3d website + resident app (qr access, guests, maintenance, dues, sos)'],['raw','  <a href="https://infinityconsultinggrowth.com" target="_blank" rel="noopener">infinityconsultinggrowth.com ↗</a>'],['w','sentinelflow'],['','  ai soc platform on n8n: kill chain, claude analyst, auto-block, 3d console'],['w','specialist'],['','  second product out the door, same discipline']],
+  projects: [['w','infinity consulting growth'],['','  3d website + resident app (qr access, guests, maintenance, dues, sos)'],['raw','  <a href="https://infinityconsultinggrowth.com" target="_blank" rel="noopener">infinityconsultinggrowth.com ↗</a>'],['w','sentinelflow'],['','  ai soc platform on n8n: kill chain, claude analyst, auto-block, 3d console'],['w','nour'],['','  bilingual ai receptionist on n8n: booking, reception inbox'],['raw','  <a href="nour/">open the live demo ↗</a>'],['w','leadflow'],['','  ai lead scoring + sales pipeline on n8n: sheets, email, slack, weekly report'],['raw','  <a href="leadflow/">open the live demo ↗</a>'],['w','specialist'],['','  second product out the door, same discipline']],
   skills: [['w','3d, web & apps'],['','  webgl · three.js · glsl · pwa · javascript'],['w','automation & ai'],['','  n8n · ai agents · claude & openai apis · rag · webhooks · docker · postgresql'],['w','security'],['','  pentest · web exploitation · soc · splunk · qradar · wazuh · ir · forensics']],
   exp: [['w','freelance — ai automation & 3d web developer (2026 – present)'],['w','cyber force — cybersecurity intern (6 months)'],['w','ksiu — b.sc. computer engineering, cyber security (2021 – 2026)'],['','training: huawei hcie r&s · netriders forensics · amit cybersecurity']],
   ctf: [['w','tryhackme     top 3% globally'],['w','hack the box  easy → hard'],['w','portswigger   web security academy'],['w','letsdefend    blue team scenarios']],
