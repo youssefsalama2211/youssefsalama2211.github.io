@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Youssef Salama · AI Automation, 3D Web &amp; Cyber Security</title>
+<title>Youssef Salama · Penetration Tester</title>
 <meta name="description" content="Youssef Mohamed Salama builds n8n automations, AI agents and interactive 3D websites, with a cyber security background that keeps every build secure.">
 <meta property="og:title" content="Youssef Salama · AI Automation, 3D Web & Cyber Security">
 <meta property="og:description" content="n8n automations, AI agents and interactive 3D websites, built securely.">
@@ -294,7 +294,7 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
 .about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,70px);align-items:center}
 .holo-wrap{position:relative;perspective:1200px;max-width:440px}
 .holo{aspect-ratio:4/5;overflow:hidden;border-radius:22px}
-.holo__img{position:absolute;inset:0;background:url("assets/youssef.jpg") center 30%/cover;filter:saturate(.9) contrast(1.05)}
+.holo__img{position:absolute;inset:0;background:url("assets/youssef.jpg") center 36%/cover;filter:saturate(.9) contrast(1.05)}
 .holo__tint{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(7,11,18,.92)),linear-gradient(120deg,rgba(58,215,242,.18),transparent 40%,rgba(139,123,255,.2));mix-blend-mode:normal}
 .holo__scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(58,215,242,.06) 0 1px,transparent 1px 4px);animation:scan 8s linear infinite;pointer-events:none}
 @keyframes scan{to{background-position:0 200px}}
@@ -539,9 +539,181 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
 .auto__body p{color:var(--fg-2)}
 .auto__body .case__links{margin-top:auto;padding-top:4px}
 @media (max-width:820px){.autos{grid-template-columns:1fr}}
+
+/* =========================================================================
+   v9 additions: the attack film, penetration testing, defence, 3D logos
+   ========================================================================= */
+.film{position:relative;height:740vh}
+.film__stick{position:sticky;top:0;height:100svh;overflow:hidden;background:#04070d}
+#world{position:absolute;inset:0;width:100%;height:100%}
+.film__shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,11,18,.78),transparent 18%,transparent 46%,rgba(7,11,18,.95) 96%)}
+.film__in{position:absolute;inset:0;pointer-events:none}
+.film__title{position:absolute;left:var(--gl);top:92px;font-family:var(--font-m);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2)}
+.film__acts{position:absolute;left:var(--gl);right:var(--gr);bottom:clamp(58px,11vh,110px)}
+.film__act{position:absolute;left:0;bottom:0;max-width:660px;display:grid;gap:14px;opacity:0;transform:perspective(900px) translate3d(0,44px,-140px) rotateX(20deg);transition:opacity .55s,transform .9s var(--ease)}
+.film__act.is-on{opacity:1;transform:none}
+.film__n{font-family:var(--font-m);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--signal)}
+.film__t{font-family:var(--font-d);font-weight:700;font-size:clamp(2.1rem,5vw,4rem);line-height:1.02;text-wrap:balance;text-shadow:0 1px 0 rgba(58,215,242,.18),0 2px 0 rgba(58,215,242,.12),0 18px 30px rgba(0,0,0,.6)}
+.film__act p{color:var(--fg-2);max-width:56ch;font-size:1.05rem;text-shadow:0 0 14px #04070d}
+.film__bar{position:absolute;left:var(--gl);right:var(--gr);bottom:clamp(26px,4.6vh,46px);height:2px;background:var(--line)}
+.film__bar i{position:absolute;inset:0;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--cyan),var(--violet),var(--signal))}
+.film__logo{position:absolute;left:0;top:0;display:grid;justify-items:center;gap:16px;opacity:0;pointer-events:none;perspective:700px;will-change:transform,opacity}
+.film__logo>span:last-child{font-family:var(--font-m);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;text-shadow:0 0 12px #000,0 0 4px #000}
+.film--flat{height:auto;padding-block:90px 30px}
+.film--flat .film__stick{position:static;height:auto;overflow:visible;background:none}
+.film--flat #world,.film--flat .film__shade,.film--flat .film__logo,.film--flat .film__bar{display:none}
+.film--flat .film__in,.film--flat .film__acts,.film--flat .film__title{position:static}
+.film--flat .film__act{position:static;opacity:1;transform:none;margin-top:36px}
+.slate{display:none}
+.lg{fill:currentColor}
+.lg3d{position:relative;display:inline-block;width:56px;height:56px;flex:none;transform-style:preserve-3d;animation:sway3d 5.6s ease-in-out infinite alternate}
+.lg3d .lg{position:absolute;left:0;top:0;width:100%;height:100%;transform:translateZ(calc(var(--i) * -2.2px));color:color-mix(in srgb,var(--brand,var(--violet)) 80%,#000)}
+.lg3d .lg:first-child{color:var(--fg);filter:drop-shadow(0 0 10px rgba(58,215,242,.55))}
+@keyframes sway3d{from{transform:rotateX(9deg) rotateY(-46deg)}to{transform:rotateX(-7deg) rotateY(46deg)}}
+.film__logo .lg3d{width:120px;height:120px}
+.film__logo .lg3d .lg{transform:translateZ(calc(var(--i) * -3.2px))}
+.phases{display:grid;gap:18px;perspective:1400px}
+.phase{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(18px,3vw,44px);align-items:center;padding:28px 30px}
+.phase__txt{display:grid;gap:12px;min-width:0}
+.phase__n{font-family:var(--font-d);font-weight:700;font-size:3rem;line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--signal)}
+.phase h3{font-family:var(--font-d);font-weight:700;font-size:clamp(1.45rem,2.7vw,2rem);line-height:1.1}
+.phase p{color:var(--fg-2)}
+.snip{margin:0;min-width:0;padding:18px 20px;border-radius:14px;background:#04070d;border:1px solid var(--line-2);overflow-x:auto;font:400 .8rem/1.8 var(--font-m);color:var(--fg-2);white-space:pre;transform:perspective(1000px) rotateY(-9deg) translateZ(20px);transform-origin:0 50%;box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 40px rgba(58,215,242,.1)}
+.snip .ln{display:block;width:max-content;min-height:1.8em}
+.snip.rdy:not(.is-typing) .ln{clip-path:inset(0 100% 0 0)}
+.snip.is-typing .ln{animation:snip-type .42s steps(26,end) both;animation-delay:calc(var(--i,0) * .17s + .15s)}
+@keyframes snip-type{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 -3% 0 0)}}
+.snip .w{color:var(--fg)}.snip .r{color:var(--signal)}.snip .c{color:var(--cyan)}.snip .m{color:var(--mute)}
+.cover3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px;perspective:1200px}
+.cover3 .card{padding:24px 26px;display:grid;gap:14px;height:100%}
+.cover3 h3{font-family:var(--font-d);font-weight:600;font-size:1.3rem}
+.vendors6{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;perspective:1200px}
+.vend{height:100%;padding:26px;display:grid;grid-template-columns:60px minmax(0,1fr);gap:20px;align-items:center}
+.vend b{display:block;font-family:var(--font-d);font-weight:700;font-size:1.22rem;line-height:1.2}
+.vend .t{display:block;margin-top:4px;color:var(--fg-2);font-size:.93rem}
+@media (max-width:900px){.phase{grid-template-columns:1fr;padding:22px}.snip{transform:none;font-size:.68rem;padding:14px}.cover3,.vendors6{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.snip.rdy:not(.is-typing) .ln{clip-path:none}}
+/* ---- v10: live logs beside each act, a status light, the firewall you can test, 3D tool logos ---- */
+.film__log{position:absolute;left:calc(100% + 48px);bottom:6px;width:min(450px,33vw);margin:0;padding:16px 18px;border-radius:14px;background:rgba(4,7,13,.74);border:1px solid var(--line-2);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:400 .74rem/1.85 var(--font-m);color:var(--fg-2);white-space:pre;overflow:hidden;transform:perspective(900px) rotateY(-12deg) rotateX(4deg);transform-origin:0 100%;box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 40px rgba(58,215,242,.1)}
+.film__log::before{content:"illustration";display:block;margin-bottom:6px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.film__log .ln{display:block;width:max-content;min-height:1.85em;clip-path:inset(0 100% 0 0)}
+.film__act.is-on .film__log .ln{animation:snip-type .45s steps(28,end) both;animation-delay:calc(var(--i,0) * .38s + .6s)}
+.film__log .r{color:var(--signal)}.film__log .c{color:var(--cyan)}.film__log .v{color:var(--violet)}.film__log .w{color:var(--fg)}
+.film__status{position:absolute;right:var(--gr);top:86px;padding:8px 14px;border-radius:999px;border:1px solid var(--line-2);background:rgba(4,7,13,.72);font-family:var(--font-m);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);transition:color .4s}
+.film__status::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:10px;background:currentColor;box-shadow:0 0 10px currentColor;animation:st-pulse 1.2s ease-in-out infinite}
+.film__status[data-s="1"],.film__status[data-s="3"]{color:var(--signal)}
+.film__status[data-s="4"]{color:var(--violet)}
+@keyframes st-pulse{50%{opacity:.25}}
+.logo3row{display:flex;flex-wrap:wrap;gap:16px 28px;margin-bottom:36px;perspective:900px}
+.l3{display:flex;align-items:center;gap:12px;font-family:var(--font-m);font-size:.78rem;color:var(--fg-2)}
+.l3 .lg3d{width:40px;height:40px}
+.l3:nth-child(3n+1) .lg3d{animation-delay:-1.9s}
+.l3:nth-child(3n+2) .lg3d{animation-delay:-3.7s}
+.fwsim{margin-top:22px;padding:26px 28px;display:grid;gap:16px}
+.fwsim__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px}
+.fwsim__head h3{font-family:var(--font-d);font-weight:700;font-size:1.35rem}
+.fwsim__head span{font-family:var(--font-m);font-size:.72rem;letter-spacing:.06em;color:var(--mute)}
+.fwsim__pkts{display:flex;flex-wrap:wrap;gap:8px}
+.fw__pkt{padding:8px 13px;border-radius:10px;border:1px solid var(--line-2);background:#04070d;font:400 .74rem/1.3 var(--font-m);color:var(--fg);cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.fw__pkt:hover{border-color:var(--cyan)}
+.fw__pkt[aria-pressed="true"]{background:var(--cyan);color:#04070d;border-color:var(--cyan)}
+.fwsim__rules{display:grid;gap:6px;margin:0;padding:0;list-style:none;counter-reset:r;perspective:900px}
+.fw__rule{display:grid;grid-template-columns:3ch minmax(0,1.6fr) minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#04070d;font:400 .76rem/1.4 var(--font-m);color:var(--fg-2);transition:transform .5s var(--ease),border-color .2s,background .2s,opacity .2s}
+.fw__rule::before{counter-increment:r;content:counter(r,decimal-leading-zero);color:var(--mute)}
+.fw__rule b{font-weight:500}
+.fw__rule .a,.fwsim__verdict .a{color:var(--cyan)}
+.fw__rule .d,.fwsim__verdict .d{color:var(--signal)}
+.fw__rule.is-scan{transform:translateZ(30px);border-color:var(--line-2)}
+.fw__rule.is-miss{transform:translateZ(-34px);opacity:.58}
+.fw__rule.is-hit{transform:translateZ(44px);border-color:var(--cyan);background:rgba(58,215,242,.1);color:var(--fg)}
+.fw__rule.is-hit.is-deny{border-color:var(--signal);background:rgba(255,106,61,.12)}
+.fwsim__verdict{min-height:3.2em;color:var(--fg-2)}
+
+@media (max-width:700px){.fw__rule{grid-template-columns:3ch minmax(0,1fr) auto}.fw__rule span:nth-child(2){display:none}.film__status{font-size:.62rem}}
+@media (prefers-reduced-motion:reduce){.film__log .ln{clip-path:none}}
+/* ---- v10b: a rail to jump between acts, tags pinned in the scene, the live feed on phones ---- */
+.film__rail{position:absolute;left:var(--gl);right:var(--gr);bottom:clamp(26px,4.6vh,46px);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));pointer-events:auto}
+.film__node{position:relative;height:34px;padding:0 0 14px;border:0;background:none;text-align:left;font:500 .64rem/1 var(--font-m);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--mute);cursor:pointer;transition:color .3s}
+.film__node::before{content:"";position:absolute;left:0;bottom:-3px;width:8px;height:8px;border-radius:50%;background:#04070d;border:1px solid var(--line-2);transition:background .3s,border-color .3s,box-shadow .3s}
+.film__node:hover{color:var(--cyan)}
+.film__node:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.film__node.is-done{color:var(--fg-2)}
+.film__node.is-done::before{background:var(--cyan);border-color:var(--cyan)}
+.film__node.is-on{color:var(--fg)}
+.film__node.is-on::before{background:var(--signal);border-color:var(--signal);box-shadow:0 0 12px var(--signal)}
+.film__tag{gap:0}
+.film__tag>span:last-child{padding:6px 11px;border-radius:8px;border:1px solid var(--line-2);background:rgba(4,7,13,.78);font-size:.8rem;letter-spacing:.1em;color:var(--fg);text-shadow:none}
+.film__tag::after{content:"";width:1px;height:24px;background:linear-gradient(var(--cyan),transparent)}
+.film__tag--bad>span:last-child{border-color:var(--signal);color:var(--signal)}
+.film__tag--bad::after{background:linear-gradient(var(--signal),transparent)}
+.film__tag--ok>span:last-child{border-color:var(--violet);color:#b9aeff}
+.film__tag--ok::after{background:linear-gradient(var(--violet),transparent)}
+.film--flat .film__rail,.film--flat .film__status{display:none}
+.film--flat .film__log{position:static;width:auto;transform:none;margin-top:6px}
+.film--flat .film__log .ln{clip-path:none;animation:none}
+@keyframes log-tick{0%{clip-path:inset(0 100% 0 0)}34%,99%{clip-path:inset(0 -3% 0 0)}100%{clip-path:inset(0 100% 0 0)}}
+@media (max-width:1180px){
+  .film:not(.film--flat) .film__log{display:block;position:relative;left:auto;bottom:auto;width:auto;height:calc(1.85em + 20px);padding:10px 12px;border-radius:10px;transform:none;box-shadow:none;white-space:nowrap;font-size:min(.72rem,2.9vw)}
+  .film:not(.film--flat) .film__log::before{display:none}
+  .film:not(.film--flat) .film__log .ln{position:absolute;left:12px;top:10px}
+  .film:not(.film--flat) .film__act.is-on .film__log .ln{animation:log-tick 1.25s steps(34,end) both;animation-delay:calc(var(--i,0) * 1.25s + .5s)}
+  .film:not(.film--flat) .film__act.is-on .film__log .ln:last-child{animation-name:snip-type;animation-duration:.5s}
+}
+@media (max-width:700px){.film__title{top:74px}.film__status{top:98px;right:auto;left:var(--gl)}.film__rail,.film__bar{right:calc(var(--gr) + 58px)}.film__node span{display:none}.film__node.is-on span{display:inline}.film__tag>span:last-child{font-size:.72rem;padding:5px 9px}.film__act p{font-size:.95rem}}
+@media (max-width:1180px) and (prefers-reduced-motion:reduce){.film:not(.film--flat) .film__log .ln:not(:last-child){display:none}}
+.fw__rule.is-hit{box-shadow:0 0 34px rgba(58,215,242,.22)}
+.fw__rule.is-hit.is-deny{box-shadow:0 0 34px rgba(255,106,61,.24)}
+@media (min-width:901px){
+  .fwsim{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-areas:"head rules" "pkts rules" "verdict rules";grid-template-rows:auto auto 1fr;column-gap:clamp(24px,4vw,56px);padding:34px 36px}
+  .fwsim__head{grid-area:head;display:grid;gap:6px}
+  .fwsim__pkts{grid-area:pkts}
+  .fwsim__verdict{grid-area:verdict;align-self:start;font-size:1.02rem}
+  .fwsim__rules{grid-area:rules;gap:8px;perspective:none;transform:perspective(1100px) rotateY(-7deg) scale(.9);transform-origin:0 50%;transform-style:preserve-3d}
+  .fw__rule{padding:13px 16px;font-size:.82rem}
+  .logo3row{gap:16px 26px}
+}
+/* the portrait card collapsed to nothing on phones in the original layout */
+@media (max-width:900px){.holo-wrap{width:100%}}
+/* ---- v11: smooth scrolling. Far sections sleep, nothing blends over the whole page, far fewer layers ---- */
+.fx-noise{mix-blend-mode:normal;opacity:.03}
+#gl{bottom:auto;height:100vh;height:100lvh}
+[data-r].in{will-change:auto}
+[data-tilt]:not(.tilt3d){transform:none;transform-style:flat}
+[data-tilt]:not(.tilt3d)::after{display:none}
+.z1,.z2,.z3{transform:none;transition:transform .35s var(--ease)}
+.tilting .z1{transform:translateZ(22px)}.tilting .z2{transform:translateZ(40px)}.tilting .z3{transform:translateZ(60px)}
+.zz,.zz *,.zz *::before,.zz *::after{animation:none!important;transition:none!important;transform:none!important;transform-style:flat!important;perspective:none!important;-webkit-backface-visibility:visible!important;backface-visibility:visible!important;will-change:auto!important;filter:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.zz .snip,.zz .film__log{overflow:hidden!important}
+.zz .lg3d .lg:not(:first-child),.zz .film__logo{display:none!important}
+.film__logo.is-off{display:none}
+.film__log{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(4,7,13,.88)}
+.film__act{visibility:hidden;transform:none;transition:opacity .2s,visibility 0s .2s}
+.film__act.is-on{visibility:visible;transition:opacity .5s .16s;animation:act-in .9s .12s var(--ease) backwards}
+@keyframes act-in{from{transform:perspective(900px) translate3d(0,44px,-140px) rotateX(20deg)}}
+.film--flat .film__act{visibility:visible;animation:none}
+.hero.seen .eyebrow,.hero.seen .name .l,.hero.seen .role,.hero.seen .lead,.hero.seen .hero__cta,.hero.seen .facts,.hero.seen .chip3d{opacity:1;animation:none}
+@media (hover:none),(max-width:900px){
+  .fx-noise{display:none}
+  .nav.solid{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(7,11,18,.94)}
+  .menu,.btn--ghost,.chip3d,.ribbon--a,.term{-webkit-backdrop-filter:none;backdrop-filter:none}
+  [data-tilt]{transform:none;transform-style:flat}
+  .hero__txt{transform:none;transform-style:flat}
+  [data-tilt]::after{display:none}
+  .z1,.z2,.z3{transform:none}
+  .lg3d .lg:nth-child(n+5){display:none}
+  .lg3d .lg{transform:translateZ(calc(var(--i) * -3.2px))}
+  .film__logo .lg3d .lg{transform:translateZ(calc(var(--i) * -5px))}
+}
+@media (prefers-reduced-motion:reduce){.film__act.is-on{animation:none}}
+/* the film's picture fills the tallest the screen can get (so phone toolbars never resize it or leave a strip), while its text stays inside the part that is always visible */
+.film__stick{height:100vh;height:100lvh}
+.film__in{bottom:auto;height:100vh;height:100svh}
+.film--flat .film__stick,.film--flat .film__in{height:auto}
 </style>
 </head>
 <body>
+<!-- Vendor marks: Simple Icons (CC0) and Dashboard Icons (Apache-2.0). Each is a trademark of its owner. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="lg-kalilinux" viewBox="0 0 24 24"><path d="M12.778 5.943s-1.97-.13-5.327.92c-3.42 1.07-5.36 2.587-5.36 2.587s5.098-2.847 10.852-3.008zm7.351 3.095l.257-.017s-1.468-1.78-4.278-2.648c1.58.642 2.954 1.493 4.021 2.665zm.42.74c.039-.068.166.217.263.337.004.024.01.039-.045.027-.005-.025-.013-.032-.013-.032s-.135-.08-.177-.137c-.041-.057-.049-.157-.028-.195zm3.448 8.479s.312-3.578-5.31-4.403a18.277 18.277 0 0 0-2.524-.187c-4.506.06-4.67-5.197-1.275-5.462 1.407-.116 3.087.643 4.73 1.408-.007.204.002.385.136.552.134.168.648.35.813.445.164.094.691.43 1.014.85.07-.131.654-.512.654-.512s-.14.003-.465-.119c-.326-.122-.713-.49-.722-.511-.01-.022-.015-.055.06-.07.059-.049-.072-.207-.13-.265-.058-.058-.445-.716-.454-.73-.009-.016-.012-.031-.04-.05-.085-.027-.46.04-.46.04s-.575-.283-.774-.893c.003.107-.099.224 0 .469-.3-.127-.558-.344-.762-.88-.12.305 0 .499 0 .499s-.707-.198-.82-.85c-.124.293 0 .469 0 .469s-1.153-.602-3.069-.61c-1.283-.118-1.55-2.374-1.43-2.754 0 0-1.85-.975-5.493-1.406-3.642-.43-6.628-.065-6.628-.065s6.45-.31 11.617 1.783c.176.785.704 2.094.989 2.723-.815.563-1.733 1.092-1.876 2.97-.143 1.878 1.472 3.53 3.474 3.58 1.9.102 3.214.116 4.806.942 1.52.84 2.766 3.4 2.89 5.703.132-1.709-.509-5.383-3.5-6.498 4.181.732 4.549 3.832 4.549 3.832zM12.68 5.663l-.15-.485s-2.484-.441-5.822-.204C3.37 5.211 0 6.38 0 6.38s6.896-1.735 12.68-.717Z"/></symbol><symbol id="lg-burpsuite" viewBox="0 0 24 24"><path d="M0 0v24h24V0Zm11.063 3.357h1.874v2.756L10.41 9.2h2.527v3.748h4.579l-4.578 5.592v2.104h-1.876v-2.758l2.528-3.086h-2.527V11.05h-4.58l4.58-5.592Z"/></symbol><symbol id="lg-metasploit" viewBox="0 0 24 24"><path d="M11.353 0h1.368q4.19.218 8.144 1.616.217.077.216.309-.015 4.033-.002 12.102 0 .81-.093 1.173c-.217.845-.76 1.635-1.326 2.325q-.318.388-1.024 1.046-2.955 2.75-6.01 5.094-.183.14-.516.335h-.17q-.627-.42-.945-.673-3.992-3.184-5.442-4.459-1.348-1.185-2.169-2.611c-.369-.64-.466-1.287-.465-2.099q.01-6.048.002-12.218c0-.183.09-.264.261-.325Q7.145.227 11.352 0ZM7.474 7.864q0-.094.069-.031l2.797 2.516a.374.372 21.2 0 1 .122.276l-.006 4.333a.182.182 0 0 0 .183.184l2.524-.018a.11.11 89.8 0 0 .108-.11q-.007-2.201.01-4.461.002-.173.146-.29 1.397-1.145 2.946-2.393.068-.055.068.032v10.881q0 .092.063.024.794-.865 1.628-1.838.71-.83.984-1.87.26-.989.262-1.997.007-4.754.009-9.768a.136.136 0 0 0-.137-.136q-1.15.004-2.424 0c-.287-.002-.441-.022-.619.149Q14.16 5.317 11.982 7.4a.046.046 0 0 1-.062 0Q9.782 5.437 7.769 3.525c-.234-.222-.515-.381-.843-.373q-1.09.026-2.33.005-.184-.004-.184.18-.003 4.54.005 9.032.002.536.036 1.027c.076 1.093.2 2.126.803 3.021.574.852 1.329 1.656 2.126 2.405q.023.022.054.026.04.006.04-.034z"/></symbol><symbol id="lg-wireshark" viewBox="0 0 24 24"><path d="m2.95 0c-1.62 0-2.95 1.32-2.95 2.95v18.1c0 1.63 1.32 2.95 2.95 2.95h18.1c1.62 0 2.95-1.32 2.95-2.95v-18.1c-.00024-1.63-1.32-2.95-2.95-2.95zm0 1.09h18.1c1.04 0 1.85.818 1.85 1.86v14h-5.27c-.335-.796-2.57-6.47.283-10.9a.516.517 0 0 0-.443-.794c-5.24.0827-8.2 3.19-9.74 6.21-1.35 2.64-1.63 4.91-1.69 5.53h-4.95v-14c0-1.04.817-1.86 1.85-1.86zm13.6 5.24c-2.62 5.24.248 11.4.248 11.4a.516.517 0 0 0 .469.301h5.62v3.05c0 1.04-.817 1.86-1.85 1.86h-18.1c-1.04 0-1.85-.818-1.85-1.86v-3.05h5.39a.516.517 0 0 0 .514-.477s.226-2.8 1.66-5.62c1.34-2.62 3.67-5.17 7.91-5.57z"/></symbol><symbol id="lg-python" viewBox="0 0 24 24"><path d="M11.858 0c-.978.005-1.913.088-2.736.234C6.7.662 6.26 1.558 6.26 3.21v2.182h5.725v.727H4.111c-1.664 0-3.121 1-3.577 2.903-.526 2.181-.549 3.542 0 5.82.407 1.694 1.379 2.902 3.043 2.902h1.969v-2.616c0-1.89 1.635-3.557 3.576-3.557h5.72c1.591 0 2.862-1.31 2.862-2.91v-5.45c0-1.553-1.309-2.718-2.863-2.977A18 18 0 0 0 11.858 0M8.762 1.755c.591 0 1.074.491 1.074 1.095 0 .601-.483 1.087-1.074 1.087A1.08 1.08 0 0 1 7.688 2.85c0-.604.48-1.095 1.074-1.095m9.656 4.364v2.543c0 1.971-1.671 3.63-3.577 3.63H9.122c-1.566 0-2.862 1.34-2.862 2.91v5.452c0 1.551 1.349 2.464 2.862 2.91 1.813.532 3.55.628 5.72 0 1.44-.418 2.862-1.258 2.862-2.91V18.47h-5.719v-.727h8.582c1.664 0 2.284-1.16 2.862-2.903.598-1.793.573-3.518 0-5.819-.41-1.656-1.196-2.903-2.862-2.903zm-3.216 13.807a1.08 1.08 0 0 1 1.074 1.088c0 .604-.48 1.094-1.074 1.094-.592 0-1.075-.49-1.075-1.094 0-.601.483-1.088 1.075-1.088"/></symbol><symbol id="lg-linux" viewBox="0 0 24 24"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 01-.018-.2v-.02a1.772 1.772 0 01.15-.768c.082-.22.232-.406.43-.533a.985.985 0 01.594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 00-.166-.267.248.248 0 00-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 00-.12.27.944.944 0 00-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 01-.131.068 2.62 2.62 0 01-.275-.402 1.772 1.772 0 01-.155-.667 1.759 1.759 0 01.08-.668 1.43 1.43 0 01.283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 01.016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 01-.448-.067 3.566 3.566 0 01-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.645 2.645 0 00-.402-.533 1.45 1.45 0 00-.275-.333c.182 0 .338-.03.465-.067a.615.615 0 00.314-.334c.108-.267 0-.697-.345-1.163-.345-.467-.931-.995-1.788-1.521-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.123 8.123 0 01.647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335.039.003.075.006.11.006.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01c.053 0 .105.005.157.014.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602-.369-.066-.61-.2-.723-.4-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336zm7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8.097 8.097 0 01-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065zm-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></symbol><symbol id="lg-tryhackme" viewBox="0 0 24 24"><path d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a.625.625 0 1 0 0-1.25H4.761a3.273 3.273 0 0 1-3.27-3.27A3.273 3.273 0 0 1 6.59 7.08a.625.625 0 0 0 .7-1.035 4.488 4.488 0 0 0-1.68-.69 5.223 5.223 0 0 1 5.096-4.104 5.221 5.221 0 0 1 5.174 4.57 4.489 4.489 0 0 0-.488.305.625.625 0 1 0 .731 1.013 3.245 3.245 0 0 1 1.912-.616 3.278 3.278 0 0 1 3.203 2.61.625.625 0 0 0 1.225-.251 4.533 4.533 0 0 0-4.428-3.61 4.54 4.54 0 0 0-.958.105C16.556 2.328 13.9 0 10.705 0zm5.192 10.64a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.054.514c0 .181.018.353.054.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .309-.296c.08-.124.137-.267.173-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.309-.291.917.917 0 0 0-.46-.108zm6.486 0a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.053.514c0 .181.017.353.053.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .31-.296c.078-.124.136-.267.172-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.308-.291.916.916 0 0 0-.461-.108zm-8.537.068l-.84.618.313.43.476-.368v1.877h.603v-2.557zm6.486 0l-.841.618.314.43.477-.368v1.877h.603v-2.557zm-4.435.445c.08 0 .143.028.193.084.05.057.087.127.114.21.026.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.028.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.248.248 0 0 1-.195-.086.584.584 0 0 1-.118-.209 1.245 1.245 0 0 1-.056-.27 2.645 2.645 0 0 1 0-.533c.01-.096.029-.186.056-.27a.583.583 0 0 1 .118-.209.25.25 0 0 1 .195-.084zm6.486 0c.08 0 .144.028.193.084.05.057.087.127.114.21.027.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.027.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.249.249 0 0 1-.195-.086.581.581 0 0 1-.117-.209 1.245 1.245 0 0 1-.056-.27 2.642 2.642 0 0 1 0-.533c.01-.096.028-.186.056-.27a.58.58 0 0 1 .117-.209.25.25 0 0 1 .195-.084zm-2.191 3.51a.93.93 0 0 0-.463.109.908.908 0 0 0-.312.291c-.08.122-.139.263-.175.426a2.383 2.383 0 0 0-.054.514c0 .18.018.353.054.516.036.164.094.308.175.432a.91.91 0 0 0 .312.296.92.92 0 0 0 .463.11c.18 0 .333-.037.46-.11a.892.892 0 0 0 .308-.296 1.32 1.32 0 0 0 .174-.432c.036-.163.054-.335.054-.516 0-.18-.018-.352-.054-.514a1.274 1.274 0 0 0-.174-.426.89.89 0 0 0-.309-.291.918.918 0 0 0-.46-.108zm-6.402.07l-.841.617.314.43.476-.369v1.878h.604v-2.557zm2.125 0l-.841.617.314.43.477-.369v1.878h.603v-2.557zm2.116 0l-.84.617.313.43.477-.369v1.878h.603v-2.557zm2.16.443c.08 0 .144.028.194.085a.605.605 0 0 1 .114.21c.026.083.044.172.053.269a2.639 2.639 0 0 1 0 .532 1.28 1.28 0 0 1-.053.27.585.585 0 0 1-.114.21.244.244 0 0 1-.193.085.25.25 0 0 1-.196-.085.589.589 0 0 1-.117-.21 1.245 1.245 0 0 1-.056-.27 2.597 2.597 0 0 1 0-.532c.01-.097.028-.186.056-.27a.589.589 0 0 1 .117-.209.249.249 0 0 1 .196-.085zm-6.729 3.073a.676.676 0 0 0-.335.078.661.661 0 0 0-.227.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.93.93 0 0 0 .127.313.65.65 0 0 0 .227.215c.092.053.204.08.335.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .225-.215c.057-.09.1-.194.125-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.931.931 0 0 0-.125-.31.658.658 0 0 0-.225-.21.667.667 0 0 0-.334-.08zm3.086 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.907.907 0 0 0-.127.31 1.69 1.69 0 0 0-.04.373c0 .131.013.256.04.375a.928.928 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.752 1.752 0 0 0 0-.748.94.94 0 0 0-.126-.31.657.657 0 0 0-.224-.21.667.667 0 0 0-.334-.08zm5.108 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.931.931 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08.13 0 .243-.027.334-.08a.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.943.943 0 0 0-.126-.31.657.657 0 0 0-.224-.21.668.668 0 0 0-.334-.08zm-6.658.05l-.61.448.227.311.346-.266v1.362h.438v-1.856zm3.068 0l-.61.448.227.311.346-.266v1.362h.438v-1.856zm5.108 0l-.611.448.228.311.346-.266v1.362h.438v-1.856zm-9.712.322c.058 0 .105.02.14.062a.421.421 0 0 1 .083.151.96.96 0 0 1 .04.196 1.932 1.932 0 0 1 0 .386.954.954 0 0 1-.04.197.421.421 0 0 1-.083.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.427.427 0 0 1-.085-.153.887.887 0 0 1-.041-.197 1.96 1.96 0 0 1 0-.386.893.893 0 0 1 .04-.196.42.42 0 0 1 .086-.151.181.181 0 0 1 .141-.062zm3.086 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.94.94 0 0 1 .04.196 1.906 1.906 0 0 1 0 .386.93.93 0 0 1-.04.197.421.421 0 0 1-.082.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.42.42 0 0 1-.086-.153.846.846 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.849.849 0 0 1 .041-.196.42.42 0 0 1 .086-.151.182.182 0 0 1 .141-.062zm5.108 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.92.92 0 0 1 .04.196 1.963 1.963 0 0 1 0 .386.943.943 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.061.18.18 0 0 1-.142-.06.437.437 0 0 1-.085-.153.95.95 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.959.959 0 0 1 .04-.196.47.47 0 0 1 .086-.151.181.181 0 0 1 .142-.062zm-1.684 1.814a.675.675 0 0 0-.336.079.66.66 0 0 0-.227.21.91.91 0 0 0-.127.31 1.731 1.731 0 0 0 0 .748.939.939 0 0 0 .127.314c.059.09.134.162.227.215.093.053.205.08.336.08a.66.66 0 0 0 .334-.08.648.648 0 0 0 .224-.215c.058-.09.1-.195.126-.314a1.737 1.737 0 0 0-.001-.747.928.928 0 0 0-.125-.31.65.65 0 0 0-.224-.211.668.668 0 0 0-.334-.079zm3.063 0a.676.676 0 0 0-.336.079.664.664 0 0 0-.227.21.906.906 0 0 0-.127.31 1.74 1.74 0 0 0 0 .748.936.936 0 0 0 .127.314.66.66 0 0 0 .227.215c.092.053.204.08.336.08a.654.654 0 0 0 .334-.08.648.648 0 0 0 .223-.215c.058-.09.1-.195.126-.314a1.74 1.74 0 0 0 0-.747.928.928 0 0 0-.126-.31.65.65 0 0 0-.223-.211.666.666 0 0 0-.334-.079zm-1.545.05l-.611.448.228.312.346-.267v1.363h.438v-1.856zm-1.518.323c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.91.91 0 0 1 .04.195 1.966 1.966 0 0 1 0 .387.951.951 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.06.18.18 0 0 1-.142-.06.428.428 0 0 1-.085-.152.914.914 0 0 1-.04-.197 1.96 1.96 0 0 1-.011-.195c0-.058.003-.122.01-.192a.923.923 0 0 1 .041-.195c.02-.06.048-.11.085-.152a.181.181 0 0 1 .142-.061zm3.063 0c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.94.94 0 0 1 .04.195 1.91 1.91 0 0 1 0 .387.93.93 0 0 1-.04.197.422.422 0 0 1-.083.152.175.175 0 0 1-.14.06.18.18 0 0 1-.141-.06.423.423 0 0 1-.085-.152.907.907 0 0 1-.04-.197 1.95 1.95 0 0 1 0-.387.915.915 0 0 1 .04-.195c.02-.06.048-.11.085-.152a.182.182 0 0 1 .142-.061zm-9.713.185a.465.465 0 0 0-.232.055.456.456 0 0 0-.157.146.627.627 0 0 0-.089.215 1.168 1.168 0 0 0-.027.259c0 .09.009.177.027.26a.648.648 0 0 0 .089.216c.04.063.093.112.157.149a.459.459 0 0 0 .232.056c.09 0 .168-.02.231-.056a.45.45 0 0 0 .156-.149.67.67 0 0 0 .087-.217 1.218 1.218 0 0 0 0-.518.647.647 0 0 0-.087-.215.448.448 0 0 0-.156-.146.458.458 0 0 0-.23-.055zm1.052.035l-.423.31.158.217.24-.185v.944h.303v-1.286zm-1.052.224c.04 0 .073.014.097.042a.284.284 0 0 1 .057.105.69.69 0 0 1 .028.136c.004.049.007.092.007.133 0 .04-.003.086-.007.135a.684.684 0 0 1-.028.136.285.285 0 0 1-.057.105.123.123 0 0 1-.097.043.125.125 0 0 1-.098-.043.298.298 0 0 1-.059-.105.612.612 0 0 1-.028-.136 1.39 1.39 0 0 1 0-.268.62.62 0 0 1 .028-.136.297.297 0 0 1 .06-.105.125.125 0 0 1 .097-.042zm3.775 1.394a.463.463 0 0 0-.232.054.452.452 0 0 0-.157.146.621.621 0 0 0-.088.214 1.19 1.19 0 0 0 0 .519.641.641 0 0 0 .088.217.46.46 0 0 0 .157.15.458.458 0 0 0 .232.054.454.454 0 0 0 .232-.055.45.45 0 0 0 .155-.149.664.664 0 0 0 .087-.217 1.189 1.189 0 0 0 0-.519.642.642 0 0 0-.087-.214.446.446 0 0 0-.155-.146.459.459 0 0 0-.232-.054zm1.052.034l-.423.31.158.216.24-.185v.945h.303V22.68zm-1.052.223c.04 0 .073.014.098.043a.3.3 0 0 1 .057.105.643.643 0 0 1 .027.135 1.31 1.31 0 0 1 0 .268.654.654 0 0 1-.027.137.307.307 0 0 1-.057.105.124.124 0 0 1-.098.042.125.125 0 0 1-.098-.042.293.293 0 0 1-.059-.105.618.618 0 0 1-.028-.137 1.364 1.364 0 0 1 0-.268.612.612 0 0 1 .028-.135.287.287 0 0 1 .06-.105.123.123 0 0 1 .097-.043z"/></symbol><symbol id="lg-hackthebox" viewBox="0 0 24 24"><path d="m22.5106 6.4566.0008-.0123a.888.888 0 0 0-.2717-.6384c-.0084-.0084-.018-.0155-.0267-.0235-.0186-.0166-.0371-.0333-.0572-.0484-.0193-.0147-.04-.0276-.0607-.0406-.0096-.006-.0182-.0131-.0281-.0188L12.4576.1266a.891.891 0 0 0-.9223.0043L1.933 5.6744c-.0107.0062-.0203.014-.0307.0205-.0073.0047-.015.008-.0223.0128-.007.0047-.013.0106-.02.0155a.8769.8769 0 0 0-.147.1333l-.0026.003a.8872.8872 0 0 0-.2218.5847l.0009.014c-.0002.0088-.0015.0176-.0015.0264v11.0708c0 .3277.1802.6288.469.7836l9.5986 5.5417c.0076.0044.0158.0075.0236.0117a.8754.8754 0 0 0 .166.0687c.0134.004.0266.0083.0401.0117a.8793.8793 0 0 0 .072.0142c.0117.0019.0232.0045.0349.006a.835.835 0 0 0 .2157 0c.0117-.0015.0232-.0041.0348-.006a.9.9 0 0 0 .072-.0142c.0135-.0034.0267-.0077.04-.0117a.895.895 0 0 0 .0646-.0217.9134.9134 0 0 0 .1015-.047c.0078-.0042.016-.0072.0236-.0117l9.5986-5.5417a.8888.8888 0 0 0 .469-.7836V6.4779c0-.0071-.0012-.0142-.0014-.0213zM5.2543 6.0822l6.5367-3.774a.4182.4182 0 0 1 .4182 0l6.5366 3.774a.4182.4182 0 0 1 0 .7243l-6.5367 3.774a.4182.4182 0 0 1-.4182 0l-6.5366-3.774a.4182.4182 0 0 1 0-.7243zm5.6134 14.3449a.4172.4172 0 0 1-.626.3613L3.718 17.0218a.4173.4173 0 0 1-.2086-.3613V9.1279a.4172.4172 0 0 1 .6258-.3613l6.524 3.7666a.4172.4172 0 0 1 .2086.3614v7.5325zm9.623-3.7666a.4173.4173 0 0 1-.2086.3613l-6.5239 3.7666a.4172.4172 0 0 1-.6259-.3613v-7.5325c0-.149.0796-.2868.2087-.3614l6.5239-3.7666a.4172.4172 0 0 1 .6258.3613v7.5326z"/></symbol><symbol id="lg-fortinet" viewBox="0 0 24 24"><path d="M0 9.785h6.788v4.454H0zm8.666-6.33h6.668v4.453H8.666zm0 12.637h6.668v4.454H8.666zm8.522-6.307H24v4.454h-6.812zM2.792 3.455C1.372 3.814.265 5.404 0 7.425v.506h6.788V3.454zM0 16.091v.554c.24 1.926 1.276 3.466 2.624 3.9h4.188v-4.454zm24-8.184v-.506c-.265-1.998-1.372-3.587-2.792-3.972h-4.02v4.454H24zM21.376 20.57c1.324-.458 2.36-1.974 2.624-3.9v-.554h-6.812v4.454Z"/></symbol><symbol id="lg-paloaltonetworks" viewBox="0 0 24 24"><path d="m10.278 15.443 1.705 1.705-3.426 3.426-3.427-3.426 8.592-8.591-1.705-1.705 3.426-3.426 3.427 3.426-8.592 8.591zM0 12.017l3.426 3.426 8.591-8.59-3.426-3.427L0 12.017zm11.983 5.13 3.426 3.427L24 11.983l-3.426-3.426-8.591 8.59z"/></symbol><symbol id="lg-splunk" viewBox="0 0 24 24"><path d="M23.348 11.911l-2.241-1.091v-.65L24 11.621v.593l-2.893 1.438v-.636zm-5.397 1.841h-.961v-5.31h.961v3.116h.102l1.28-1.481.723.31-1.23 1.316 1.453 1.809-.888.311-1.44-1.996zm-2.577-.002v-2.068a2.685 2.685 0 0 0-.026-.42.791.791 0 0 0-.09-.26c-.113-.202-.308-.304-.59-.304a.888.888 0 0 0-.461.113.673.673 0 0 0-.286.33 1.012 1.012 0 0 0-.07.263c-.012.13-.019.262-.017.395v1.95h-.961v-3.614h.961l.002.485c.185-.2.373-.348.566-.437.192-.089.418-.134.673-.134.286 0 .527.058.721.177a1.016 1.016 0 0 1 .475.665 1.972 1.972 0 0 1 .054.448c.002.1.004.22.004.358v2.053zm-4.115.002l-.002-.485a1.783 1.783 0 0 1-.565.437 1.597 1.597 0 0 1-.674.135c-.285 0-.524-.057-.72-.17a.972.972 0 0 1-.425-.504.75.75 0 0 1-.054-.167 1.918 1.918 0 0 1-.033-.199 2.033 2.033 0 0 1-.017-.258 15.516 15.516 0 0 1-.005-.355V10.13h.956v2.07c-.003.141.006.282.026.42.015.092.045.18.09.26.113.204.308.306.59.306.36 0 .606-.15.74-.449.035-.082.06-.168.074-.257.017-.134.024-.269.022-.403v-1.95h.955v3.624zM7.184 8.44h.955v5.31h-.955zM5.759 11.9c0-.396-.08-.708-.24-.937a.759.759 0 0 0-.657-.345.804.804 0 0 0-.693.366c-.171.245-.256.574-.253.99 0 .405.084.723.25.957a.796.796 0 0 0 .69.347.685.685 0 0 0 .433-.135.985.985 0 0 0 .277-.34c.071-.14.121-.292.147-.448.03-.151.043-.3.046-.455m1.01-.036c.003.266-.04.532-.129.786-.082.23-.204.441-.364.626-.31.361-.764.567-1.24.563a1.67 1.67 0 0 1-.313-.028 1.041 1.041 0 0 1-.275-.098 1.33 1.33 0 0 1-.257-.178 2.379 2.379 0 0 1-.265-.268v2.293h-.929v-5.425h.93l.004.529c.169-.212.353-.368.55-.468.197-.1.426-.15.688-.147a1.509 1.509 0 0 1 1.156.507c.148.166.259.361.33.571.08.236.12.485.115.737m-4.21.89a.946.946 0 0 1-.102.441 1.007 1.007 0 0 1-.282.345c-.13.1-.275.173-.43.22a1.8 1.8 0 0 1-.546.08 1.985 1.985 0 0 1-.637-.097 1.964 1.964 0 0 1-.563-.32l.312-.505c.15.126.284.217.405.275.115.057.24.087.368.087a.557.557 0 0 0 .373-.12.396.396 0 0 0 .14-.322.475.475 0 0 0-.12-.318 1.306 1.306 0 0 0-.187-.173 9.231 9.231 0 0 0-.308-.232 6.787 6.787 0 0 1-.281-.21 2.11 2.11 0 0 1-.252-.232 1.039 1.039 0 0 1-.18-.275.826.826 0 0 1-.069-.347.893.893 0 0 1 .094-.409.935.935 0 0 1 .255-.314 1.22 1.22 0 0 1 .39-.203c.16-.05.327-.074.494-.072.184 0 .368.026.545.076.174.05.338.123.488.219l-.282.454a1.05 1.05 0 0 0-.608-.201.504.504 0 0 0-.323.102.307.307 0 0 0-.126.253c0 .098.041.193.113.26.074.078.203.186.385.325.185.136.336.253.457.355.104.085.202.182.286.286.065.08.115.173.145.273a.808.808 0 0 1 .046.299Z"/></symbol><symbol id="lg-ibm" viewBox="0 0 157 65"><path d="M30.444 60.208v4.03H0v-4.03zm78.291-.001v4.03H86.983v-4.03zm47.858 0v4.03H134.84v-4.03zm-33.416 0-1.398 4.03-1.38-4.03zm-88.384 0h42.775c-2.797 2.426-6.39 3.925-10.327 4.025l-.423.006H34.793zh42.775Zm-4.35-8.46v4.03H0v-4.03zm52.402 0c-.332 1.248-.8 2.44-1.389 3.555l-.259.474H34.793v-4.029zm73.748-.005v4.031H134.84v-4.03zm-47.858 0v4.031H86.983v-4.03zm17.375 0-1.398 4.031h-5.85l-1.395-4.03zM21.745 43.285v4.03H8.698v-4.03zm61.195 0a17.3 17.3 0 0 1 .476 3.51l.008.52H68.796v-4.03zm-26.401 0v4.03H43.491v-4.03zm72.502-.007-1.396 4.03H115.93l-1.397-4.03zm18.85 0v4.03h-13.05v-4.03zm-39.156 0v4.03H95.684v-4.03zm-86.99-8.454v4.03H8.698v-4.03zm56.117 0a17 17 0 0 1 2.926 3.582l.264.447h-37.56v-4.03zm30.873-.01v4.03H95.684v-4.03zm39.157 0v4.03H134.84v-4.03zm-15.919 0-1.396 4.03h-17.579l-1.396-4.03zm-50.778-8.452a17 17 0 0 1-2.82 3.674l-.37.355H43.49v-4.029zm-59.45 0v4.03H8.698v-4.03zm126.147-.013v4.031H134.84v-3.839l-1.33 3.839h-11.456l1.373-4.03zm-27.743 0 1.372 4.031h-11.456l-1.33-3.839v3.84H95.684v-4.032zm-98.404-8.448v4.03H8.698V17.9zm61.68 0c0 1.215-.134 2.399-.375 3.542l-.11.487H68.796V17.9zM56.538 17.9v4.03H43.491V17.9zm91.352-.015v4.03h-22.954l1.37-4.03zm-30.624 0 1.372 4.03H95.684v-4.03zM30.444 9.437v4.03H0v-4.03zm50.753 0a17 17 0 0 1 1.498 3.499l.15.531H34.794v-4.03zm75.396-.018v4.03h-28.776l1.373-4.03zm-42.207 0 1.372 4.031H86.982V9.42zM30.444.978v4.03H0V.977zm36.374 0c3.96 0 7.594 1.415 10.448 3.772l.303.257H34.794V.977zm89.775-.022v4.031h-25.894l1.372-4.03zm-45.098 0 1.372 4.03H86.982V.955z"/></symbol><symbol id="lg-wazuh" viewBox="0 0 48 48"><path d="M24 0C10.971 0 0 10.971 0 24s10.629 24 24 24 24-10.629 24-24S37.029 0 24 0m1.371 32.914-4.114-13.029-4.114 13.029h-3.086L8.571 14.743H12l3.771 12.343 3.772-12.343h3.086l3.77 12.343 3.772-12.343H33.6l-5.143 18.171zm10.971.343c-1.714 0-2.743-1.372-2.743-2.743 0-1.714 1.372-2.743 2.743-2.743 1.372 0 2.743 1.371 2.743 2.743s-1.028 2.743-2.743 2.743"/></symbol><symbol id="lg-huawei" viewBox="0 0 24 24"><path d="M3.67 6.14S1.82 7.91 1.72 9.78v.35c.08 1.51 1.22 2.4 1.22 2.4 1.83 1.79 6.26 4.04 7.3 4.55 0 0 .06.03.1-.01l.02-.04v-.04C7.52 10.8 3.67 6.14 3.67 6.14zM9.65 18.6c-.02-.08-.1-.08-.1-.08l-7.38.26c.8 1.43 2.15 2.53 3.56 2.2.96-.25 3.16-1.78 3.88-2.3.06-.05.04-.09.04-.09zm.08-.78C6.49 15.63.21 12.28.21 12.28c-.15.46-.2.9-.21 1.3v.07c0 1.07.4 1.82.4 1.82.8 1.69 2.34 2.2 2.34 2.2.7.3 1.4.31 1.4.31.12.02 4.4 0 5.54 0 .05 0 .08-.05.08-.05v-.06c0-.03-.03-.05-.03-.05zM9.06 3.19a3.42 3.42 0 00-2.57 3.15v.41c.03.6.16 1.05.16 1.05.66 2.9 3.86 7.65 4.55 8.65.05.05.1.03.1.03a.1.1 0 00.06-.1c1.06-10.6-1.11-13.42-1.11-13.42-.32.02-1.19.23-1.19.23zm8.299 2.27s-.49-1.8-2.44-2.28c0 0-.57-.14-1.17-.22 0 0-2.18 2.81-1.12 13.43.01.07.06.08.06.08.07.03.1-.03.1-.03.72-1.03 3.9-5.76 4.55-8.64 0 0 .36-1.4.02-2.34zm-2.92 13.07s-.07 0-.09.05c0 0-.01.07.03.1.7.51 2.85 2 3.88 2.3 0 0 .16.05.43.06h.14c.69-.02 1.9-.37 3-2.26l-7.4-.25zm7.83-8.41c.14-2.06-1.94-3.97-1.94-3.98 0 0-3.85 4.66-6.67 10.8 0 0-.03.08.02.13l.04.01h.06c1.06-.53 5.46-2.77 7.28-4.54 0 0 1.15-.93 1.21-2.42zm1.52 2.14s-6.28 3.37-9.52 5.55c0 0-.05.04-.03.11 0 0 .03.06.07.06 1.16 0 5.56 0 5.67-.02 0 0 .57-.02 1.27-.29 0 0 1.56-.5 2.37-2.27 0 0 .73-1.45.17-3.14z"/></symbol></svg>
 <a class="skip" href="#main">Skip to content</a>
 <canvas id="gl" aria-hidden="true"></canvas>
 <div class="fx-grid" aria-hidden="true"></div>
@@ -553,14 +725,14 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
   <div class="container nav__in">
     <a class="logo" href="#top" aria-label="Youssef Mohamed Salama, home">YMS<i>_</i></a>
     <nav class="nav__links" aria-label="Sections">
-      <a href="#services">Services</a><a href="#work">Work</a><a href="#lab">3D Lab</a><a href="#process">Process</a><a href="#skills">Skills</a><a href="#about">About</a>
+      <a href="#film">Film</a><a href="#pentest">Pentest</a><a href="#defense">Defense</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#lab">3D Lab</a>
     </nav>
     <a class="nav__cta mag" href="#contact">Hire me</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
 </header>
 <div class="menu" id="menu">
-  <a href="#services" style="--i:0">Services</a><a href="#work" style="--i:1">Work</a><a href="#lab" style="--i:2">3D Lab</a><a href="#process" style="--i:2">Process</a><a href="#skills" style="--i:3">Skills</a>
+  <a href="#film" style="--i:0">The film</a><a href="#pentest" style="--i:0">Pentest</a><a href="#defense" style="--i:1">Defense</a><a href="#services" style="--i:1">Services</a><a href="#work" style="--i:1">Work</a><a href="#lab" style="--i:2">3D Lab</a><a href="#process" style="--i:2">Process</a><a href="#skills" style="--i:3">Skills</a>
   <a href="#about" style="--i:4">About</a><a href="#experience" style="--i:5">Experience</a><a href="#arena" style="--i:6">CTF &amp; Certs</a><a href="#contact" style="--i:7">Contact</a>
 </div>
 
@@ -569,29 +741,29 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
 <section class="hero" id="top" data-shape="0" data-side="right" data-op="1">
   <div class="container hero__in">
     <div class="hero__txt" id="heroTxt">
-      <p class="eyebrow">3D Websites · Apps · AI Automation · Security</p>
+      <p class="eyebrow">Penetration Testing · Firewalls · XDR · Secure Builds</p>
       <h1 class="name" id="name" aria-label="Youssef Mohamed Salama">
         <span class="row ext" data-word="YOUSSEF"></span>
         <span class="row ext" data-word="MOHAMED"></span>
         <span class="row ext c" data-word="SALAMA"></span>
       </h1>
-      <p class="role" aria-live="off">&gt; <span id="typed">3D Web Developer</span><span class="caret" aria-hidden="true"></span></p>
-      <p class="lead">I build <strong>immersive 3D websites</strong> and <strong>web &amp; mobile apps</strong> that people remember, plus <strong>n8n automations</strong> and <strong>AI agents</strong> that run the busywork. As a computer engineer specialized in cyber security, I make sure every one of them is secure.</p>
+      <p class="role" aria-live="off">&gt; <span id="typed">Penetration Tester</span><span class="caret" aria-hidden="true"></span></p>
+      <p class="lead">I break into <strong>networks and web apps</strong> on purpose, with permission, and hand you the way I got in before anyone else finds it. Then I help hold the line with <strong>FortiGate, Palo Alto and Cortex XDR</strong>, and build the 3D websites, apps and automations businesses run on.</p>
       <div class="hero__cta">
-        <a class="btn btn--primary mag" href="#work">See my work</a>
-        <a class="btn btn--ghost mag" href="#services">What I build</a>
+        <a class="btn btn--primary mag" href="#film">Watch the attack</a>
+        <a class="btn btn--ghost mag" href="#pentest">How I test</a>
         <a class="btn btn--text" href="cv.pdf" target="_blank" rel="noopener">View CV ↗</a>
       </div>
       <ul class="facts">
-        <li><b>3D</b>WebGL · Three.js</li><li><b>Apps</b>Web · Mobile</li><li><b>n8n</b>AI agents</li><li><b>Top 3%</b>TryHackMe</li>
+        <li><b>Top 3%</b>TryHackMe</li><li><b>PT1</b>Jr Penetration Tester</li><li><b>NGFW</b>FortiGate · Palo Alto</li><li><b>XDR</b>Cortex</li>
       </ul>
     </div>
     <div class="orbitals" id="orbitals" aria-hidden="true">
-      <div class="chip3d" style="--x:6%;--y:10%;--z:26;--dl:1.6s"><span><b>3D</b> websites</span></div>
-      <div class="chip3d" style="--x:56%;--y:2%;--z:14;--dl:1.75s"><span><b>Web &amp;</b> mobile apps</span></div>
-      <div class="chip3d" style="--x:64%;--y:44%;--z:32;--dl:1.9s"><span><b>WebGL</b> · GLSL</span></div>
-      <div class="chip3d" style="--x:0%;--y:56%;--z:18;--dl:2.05s"><span><b>n8n</b> · AI agents</span></div>
-      <div class="chip3d" style="--x:30%;--y:84%;--z:22;--dl:2.2s"><span><b>Secure</b> by default</span></div>
+      <div class="chip3d" style="--x:6%;--y:10%;--z:26;--dl:1.6s"><span><b>Pentest</b> · web &amp; network</span></div>
+      <div class="chip3d" style="--x:56%;--y:2%;--z:14;--dl:1.75s"><span><b>FortiGate</b> · NGFW</span></div>
+      <div class="chip3d" style="--x:64%;--y:44%;--z:32;--dl:1.9s"><span><b>Palo Alto</b> · PAN-OS</span></div>
+      <div class="chip3d" style="--x:0%;--y:56%;--z:18;--dl:2.05s"><span><b>Cortex</b> XDR</span></div>
+      <div class="chip3d" style="--x:30%;--y:84%;--z:22;--dl:2.2s"><span><b>Top 3%</b> TryHackMe</span></div>
     </div>
   </div>
 </section>
@@ -601,96 +773,139 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
   <div class="ribbon ribbon--b"><div class="ribbon__track" id="ribB"></div></div>
 </div>
 
-<!-- ============================ SERVICES ============================ -->
-<section class="section" id="services" data-shape="1" data-side="left" data-op=".55">
-  <div class="ghost" aria-hidden="true">BUILD</div>
-  <div class="container">
-    <div class="sec-head">
-      <p class="eyebrow" data-r="up">What I build</p>
-      <h2 class="h2" data-r="up" style="--d:80ms">3D worlds people remember, <em>systems that run themselves.</em></h2>
-      <p data-r="up" style="--d:160ms">Six things I build for clients. Each one starts with a fixed scope and price, ships with security and error handling built in, and ends with a walkthrough.</p>
+<!-- ============================ FILM ============================ -->
+<section class="film zz" id="film" data-shape="0" data-side="center" data-op="0" aria-label="A short film: how an attack happens, and how it is stopped">
+  <div class="film__stick">
+    <canvas id="world" aria-hidden="true"></canvas>
+    <div class="film__shade" aria-hidden="true"></div>
+    <div class="film__logo is-off" id="filmFg" aria-hidden="true"><span class="lg3d" style="--brand:#ee3124"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:6" aria-hidden="true"><use href="#lg-fortinet"/></svg></span><span>FortiGate</span></div>
+    <div class="film__logo is-off" id="filmPa" aria-hidden="true"><span class="lg3d" style="--brand:#f04e23"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:6" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg></span><span>Palo Alto Networks</span></div>
+    <div class="film__logo is-off" id="filmXdr" aria-hidden="true"><span class="lg3d" style="--brand:#f04e23"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:6" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg></span><span>Cortex XDR</span></div>
+    <div class="film__logo is-off film__tag" id="filmZ0" aria-hidden="true"><span>The internet</span></div>
+    <div class="film__logo is-off film__tag" id="filmZ1" aria-hidden="true"><span>Public servers (DMZ)</span></div>
+    <div class="film__logo is-off film__tag film__tag--ok" id="filmZ3" aria-hidden="true"><span>ws-11 · isolated</span></div>
+    <div class="film__logo is-off film__tag" id="filmM0" aria-hidden="true"><span>FortiGate · perimeter</span></div>
+    <div class="film__logo is-off film__tag" id="filmM1" aria-hidden="true"><span>DMZ · public servers</span></div>
+    <div class="film__logo is-off film__tag" id="filmM2" aria-hidden="true"><span>Palo Alto · segmentation</span></div>
+    <div class="film__logo is-off film__tag" id="filmM3" aria-hidden="true"><span>Cortex XDR · endpoints</span></div>
+    <div class="container film__in">
+      <p class="film__title">A short film · scroll to play</p>
+      <p class="film__status" id="filmStatus" aria-hidden="true">Scanning</p>
+      <ol class="film__acts">
+        <li class="film__act is-on"><span class="film__n">Act 1 of 6</span><h2 class="film__t">Reconnaissance</h2><p>Every attack starts with someone looking. Scanners all over the world sweep the internet for anything left exposed: an open port, an old login page, a forgotten server. One of them finds the target.</p><pre class="film__log" aria-hidden="true">scan   203.0.113.7  :22    <span class="c">open</span>
+scan   203.0.113.7  :80    <span class="c">open</span>
+scan   203.0.113.7  :445   <span class="c">open</span>
+scan   203.0.113.7  :3306  filtered
+<span class="r">target acquired</span></pre></li>
+        <li class="film__act"><span class="film__n">Act 2 of 6</span><h2 class="film__t">The attempt</h2><p>Then they throw everything at it: exploits for known flaws, stolen passwords, malware in an attachment. The only thing between them and the network is the perimeter.</p><pre class="film__log" aria-hidden="true">try    ssh   root / 123456         fail
+try    http  /admin, SQL payload   <span class="r">sent</span>
+try    smb   known exploit         <span class="r">sent</span>
+try    mail  invoice.pdf.exe       <span class="r">sent</span>
+<span class="r">thousands of attempts a minute</span></pre></li>
+        <li class="film__act"><span class="film__n">Act 3 of 6</span><h2 class="film__t">FortiGate holds the perimeter</h2><p>A Fortinet FortiGate reads every packet against the policy. Ordinary traffic walks through the gate and is inspected on the way. Whatever nothing allows is dropped and logged.</p><pre class="film__log" aria-hidden="true"><span class="r">deny</span>   untrust > dmz  tcp/445  implicit deny
+<span class="r">deny</span>   untrust > dmz  tcp/22   implicit deny
+<span class="r">block</span>  untrust > dmz  tcp/443  IPS: SQL injection
+<span class="c">allow</span>  untrust > dmz  tcp/443  policy: web-01
+<span class="c">perimeter holding</span></pre></li>
+        <li class="film__act"><span class="film__n">Act 4 of 6</span><h2 class="film__t">Palo Alto stops the spread</h2><p>One gets in and takes a server in the DMZ. It reaches for the rest of the network and runs into the second wall: a Palo Alto Networks firewall that keeps every zone apart and knows which application is talking.</p><pre class="film__log" aria-hidden="true"><span class="c">allow</span>  untrust > dmz  web-browsing  web-01
+<span class="r">alert</span>  dmz            web-01 spawned a shell
+<span class="r">deny</span>   dmz > trust    ms-ds-smb     interzone-default
+<span class="r">deny</span>   dmz > trust    ssh           interzone-default
+<span class="c">lateral movement stopped</span></pre></li>
+        <li class="film__act"><span class="film__n">Act 5 of 6</span><h2 class="film__t">Cortex XDR catches what is left</h2><p>A firewall cannot see a user opening the wrong file. Cortex XDR watches every endpoint, ties the behaviour to the network logs, isolates the machine and raises one incident instead of a thousand alerts.</p><pre class="film__log" aria-hidden="true"><span class="r">alert</span>   ws-11  winword.exe > powershell.exe
+<span class="r">alert</span>   ws-11  encoded command, outbound beacon
+<span class="v">stitch</span>  3 alerts > 1 incident, severity high
+<span class="v">action</span>  ws-11 isolated from the network
+<span class="c">contained</span></pre></li>
+        <li class="film__act"><span class="film__n">Act 6 of 6</span><h2 class="film__t">The report</h2><p>Then it gets written down: how they got in, how far they reached, what stopped them, and what to fix so it cannot happen the same way twice. A test or an incident is only finished when the report is.</p><pre class="film__log" aria-hidden="true"><span class="w">entry</span>    exposed admin page on web-01
+<span class="w">reached</span>  DMZ only, LAN untouched
+<span class="w">stopped</span>  segmentation rule, XDR isolation
+<span class="c">fix 1</span>    patch web-01, remove /admin
+<span class="c">fix 2</span>    MFA on all remote access
+<span class="c">retest</span>   scheduled</pre></li>
+      </ol>
+      <div class="film__bar" aria-hidden="true"><i></i></div>
+      <div class="film__rail" role="group" aria-label="Jump to a part of the film"><button class="film__node" type="button" aria-label="Go to act 1: Recon"><span>Recon</span></button><button class="film__node" type="button" aria-label="Go to act 2: Attempt"><span>Attempt</span></button><button class="film__node" type="button" aria-label="Go to act 3: FortiGate"><span>FortiGate</span></button><button class="film__node" type="button" aria-label="Go to act 4: Palo Alto"><span>Palo Alto</span></button><button class="film__node" type="button" aria-label="Go to act 5: Cortex XDR"><span>Cortex XDR</span></button><button class="film__node" type="button" aria-label="Go to act 6: Report"><span>Report</span></button></div>
     </div>
-    <div class="svc-grid">
-      <div data-r="up" style="--d:0ms"><article class="card svc svc--hot" data-tilt="10">
-        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
-        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M4 7.4l8 4.6 8-4.6M12 12v9.2"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">01</span></div>
-        <h3 class="z2">3D Websites</h3>
-        <p class="z1">Immersive landing pages and product showcases with real-time 3D: models people can rotate, scenes that react to scroll, and motion that makes a brand impossible to forget.</p>
-        <div class="tags z1"><span class="tag tag--hot">WebGL</span><span class="tag">Three.js</span><span class="tag">GLSL shaders</span><span class="tag">3D models</span><span class="tag">Scroll motion</span></div>
-      </article></div>
-      <div data-r="up" style="--d:80ms"><article class="card svc svc--hot" data-tilt="10">
-        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
-        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">02</span></div>
-        <h3 class="z2">Web &amp; Mobile Apps</h3>
-        <p class="z1">Complete apps for real operations, from customer portals to resident apps with QR access, payments and live requests. Mobile-first, bilingual, and installable on any phone.</p>
-        <div class="tags z1"><span class="tag tag--hot">PWA</span><span class="tag">iOS · Android</span><span class="tag">Dashboards</span><span class="tag">Payments</span><span class="tag">Arabic · English</span></div>
-      </article></div>
-      <div data-r="up" style="--d:160ms"><article class="card svc svc--hot" data-tilt="10">
-        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
-        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><ellipse cx="12" cy="12" rx="9.5" ry="4" transform="rotate(-25 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="4" transform="rotate(35 12 12)"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">03</span></div>
-        <h3 class="z2">Interactive 3D Experiences</h3>
-        <p class="z1">Product configurators, 3D data dashboards, interactive maps and site models that let people explore instead of scrolling past.</p>
-        <div class="tags z1"><span class="tag tag--hot">Configurators</span><span class="tag">3D data viz</span><span class="tag">Interactive maps</span><span class="tag">Digital twins</span></div>
-      </article></div>
-      <div data-r="up" style="--d:0ms"><article class="card svc" data-tilt="10">
-        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
-        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="6" rx="1.5"/><rect x="15" y="14" width="6" height="6" rx="1.5"/><path d="M9 7h4a2 2 0 0 1 2 2v5"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">04</span></div>
-        <h3 class="z2">n8n Automation</h3>
-        <p class="z1">Workflows that move data between your apps, follow up with leads, process orders and send reports on schedule, with retries and error alerts so nothing fails silently.</p>
-        <div class="tags z1"><span class="tag tag--hot">n8n</span><span class="tag">Webhooks</span><span class="tag">REST APIs</span><span class="tag">CRM</span><span class="tag">Self-hosted</span></div>
-      </article></div>
-      <div data-r="up" style="--d:80ms"><article class="card svc" data-tilt="10">
-        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
-        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4"/><circle cx="9" cy="13.5" r="1.2" fill="currentColor"/><circle cx="15" cy="13.5" r="1.2" fill="currentColor"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">05</span></div>
-        <h3 class="z2">AI Agents &amp; Chatbots</h3>
-        <p class="z1">Assistants that answer your customers in English and Arabic from your own documents, book appointments, and hand off to a human when it matters.</p>
-        <div class="tags z1"><span class="tag tag--hot">Claude</span><span class="tag">OpenAI</span><span class="tag">RAG</span><span class="tag">WhatsApp</span><span class="tag">Web chat</span></div>
-      </article></div>
-      <div data-r="up" style="--d:160ms"><article class="card svc" data-tilt="10">
-        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
-        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 7.8-8 9-4.6-1.2-8-4.5-8-9V6l8-3z"/><path d="M8.5 12.5l2.3 2.3 4.7-4.8"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">06</span></div>
-        <h3 class="z2">Security Automation &amp; Testing</h3>
-        <p class="z1">Alert triage, threat-intel enrichment and automated response for your SOC, plus penetration testing for the sites and apps you already run.</p>
-        <div class="tags z1"><span class="tag tag--hot">Wazuh</span><span class="tag">SIEM</span><span class="tag">Pentest</span><span class="tag">Hardening</span><span class="tag">Secure code</span></div>
-      </article></div>
-    </div>
-    </div>
+  </div>
 </section>
 
-<!-- ============================ 3D LAB ============================ -->
-<section class="section" id="lab" data-shape="1" data-side="center" data-op=".12">
-  <div class="ghost" aria-hidden="true">LAB</div>
+<!-- ============================ PENTEST ============================ -->
+<section class="section zz" id="pentest" data-shape="7" data-side="right" data-op=".3">
+  <div class="ghost" aria-hidden="true">PWN</div>
   <div class="container">
     <div class="sec-head">
-      <p class="eyebrow" data-r="up">3D Lab · live in your browser</p>
-      <h2 class="h2" data-r="up" style="--d:80ms">Don't take my word for it. <em>Spin it.</em></h2>
-      <p data-r="up" style="--d:160ms">Three real-time WebGL demos, running on your device right now. The same techniques power the 3D websites and apps I build for clients.</p>
+      <p class="eyebrow" data-r="up">Penetration testing</p>
+      <h2 class="h2" data-r="up" style="--d:80ms">I get in first, <em>with permission.</em></h2>
+      <p data-r="up" style="--d:160ms">Web apps, APIs and networks, tested the way an attacker works. Five phases, the same way every time, ending in a report your team can act on. Ranked in the top 3% worldwide on TryHackMe, PT1 certified.</p>
     </div>
-    <div class="lab">
-      <div class="lab__stage" id="labStage" data-active="product" data-r="zoom">
-        <canvas id="labCv" aria-label="Live 3D demo, drag to rotate"></canvas>
-        <div class="lab__hud"><span class="lab__live">Live WebGL</span><span>Drag to rotate</span></div>
-        <div class="lab__cfg">
-          <button class="sw on" style="--c:#3ad7f2" data-swatch="#3ad7f2" aria-label="Cyan"></button>
-          <button class="sw" style="--c:#8b7bff" data-swatch="#8b7bff" aria-label="Violet"></button>
-          <button class="sw" style="--c:#ff6a3d" data-swatch="#ff6a3d" aria-label="Signal orange"></button>
-          <button class="sw" style="--c:#f5c451" data-swatch="#f5c451" aria-label="Gold"></button>
-          <button class="sw" style="--c:#43e38a" data-swatch="#43e38a" aria-label="Mint"></button>
-          <button class="fin on" data-finish="1">Gloss</button><button class="fin" data-finish="0">Matte</button>
-        </div>
-      </div>
-      <div class="lab__side" role="tablist" aria-label="Choose a demo">
-        <button class="demo-tab" role="tab" aria-selected="true" data-demo="product" data-r="right"><small>01 · Product</small><b>3D product configurator</b><span>Rotate the product, then switch its color and finish live. Built for launches and online stores.</span></button>
-        <button class="demo-tab" role="tab" aria-selected="false" data-demo="globe" data-r="right" style="--d:80ms"><small>02 · Data</small><b>Live data globe</b><span>Thousands of points and animated routes: a hero that makes a dashboard or a logistics brand feel alive.</span></button>
-        <button class="demo-tab" role="tab" aria-selected="false" data-demo="terrain" data-r="right" style="--d:160ms"><small>03 · Experience</small><b>Retro-future flyover</b><span>An endless generated landscape for immersive landing pages, events and games.</span></button>
-      </div>
+    <div class="logo3row" data-r="up"><span class="l3"><span class="lg3d" style="--brand:#7fb2d0"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-kalilinux"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-kalilinux"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-kalilinux"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-kalilinux"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-kalilinux"/></svg></span>Kali Linux</span><span class="l3"><span class="lg3d" style="--brand:#ff6633"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-burpsuite"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-burpsuite"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-burpsuite"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-burpsuite"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-burpsuite"/></svg></span>Burp Suite</span><span class="l3"><span class="lg3d" style="--brand:#2596cd"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-metasploit"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-metasploit"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-metasploit"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-metasploit"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-metasploit"/></svg></span>Metasploit</span><span class="l3"><span class="lg3d" style="--brand:#3aa0d8"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-wireshark"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-wireshark"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-wireshark"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-wireshark"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-wireshark"/></svg></span>Wireshark</span><span class="l3"><span class="lg3d" style="--brand:#ffd43b"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-python"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-python"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-python"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-python"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-python"/></svg></span>Python</span><span class="l3"><span class="lg3d" style="--brand:#fcc624"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-linux"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-linux"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-linux"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-linux"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-linux"/></svg></span>Linux</span><span class="l3"><span class="lg3d" style="--brand:#ff5a5a"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-tryhackme"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-tryhackme"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-tryhackme"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-tryhackme"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-tryhackme"/></svg></span>TryHackMe</span><span class="l3"><span class="lg3d" style="--brand:#9fef00"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-hackthebox"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-hackthebox"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-hackthebox"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-hackthebox"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-hackthebox"/></svg></span>Hack The Box</span></div>
+    <div class="phases">
+      <div data-r="left"><article class="card phase" data-tilt="4"><div class="phase__txt"><span class="phase__n">01</span><h3>Scope</h3><p>Targets, rules and a test window, agreed in writing before a single packet leaves my machine. No authorisation, no test.</p><div class="tags"><span class="tag tag--hot">Written authorisation</span><span class="tag">Rules of engagement</span></div></div><pre class="snip"><span class="w">$ cat scope.txt</span>                 <span class="m"># lab example</span>
+targets   app.example.com
+          10.10.14.0/24
+window    Sat 22:00 to Sun 06:00
+rules     no denial of service
+          stop and call on live data
+<span class="c">signed    both sides, before testing</span></pre></article></div>
+      <div data-r="right"><article class="card phase" data-tilt="4"><div class="phase__txt"><span class="phase__n">02</span><h3>Recon and enumeration</h3><p>Map everything that is exposed: hosts, open ports, services and versions, hidden directories, parameters and login pages. Most of a test is won here.</p><div class="tags"><span class="tag tag--hot">Nmap</span><span class="tag">Wireshark</span><span class="tag">Burp Suite</span></div></div><pre class="snip"><span class="w">$ nmap -sC -sV 10.10.14.7</span>        <span class="m"># lab example</span>
+<span class="m">PORT      STATE  SERVICE      VERSION</span>
+22/tcp    open   ssh          OpenSSH 8.2p1
+80/tcp    open   http         Apache httpd 2.4.41
+445/tcp   open   netbios-ssn  Samba smbd 4.6.2
+3306/tcp  open   mysql        MySQL 5.7.33
+<span class="c"># 4 services, a login page and a hidden /admin</span></pre></article></div>
+      <div data-r="left"><article class="card phase" data-tilt="4"><div class="phase__txt"><span class="phase__n">03</span><h3>Exploitation</h3><p>Prove the weakness is real. On the web that means SQL injection, XSS, SSRF, authentication bypass and broken access control. On the network, vulnerable and misconfigured services.</p><div class="tags"><span class="tag tag--hot">Burp Suite</span><span class="tag">Metasploit</span><span class="tag">Python</span></div></div><pre class="snip">GET /item?id=7'             <span class="r">500 SQL syntax error</span>
+GET /item?id=7 ORDER BY 4   <span class="w">200</span>
+GET /item?id=7 ORDER BY 5   <span class="r">500</span>
+<span class="m"># 4 columns, input reaches the query unescaped</span>
+<span class="r">[!] finding   SQL injection in "id"   High</span></pre></article></div>
+      <div data-r="right"><article class="card phase" data-tilt="4"><div class="phase__txt"><span class="phase__n">04</span><h3>Privilege escalation and lateral movement</h3><p>Turn a low-privilege foothold into real impact through misconfigurations, weak credentials and the trust between hosts, the same way a real intruder would.</p><div class="tags"><span class="tag tag--hot">Kali Linux</span><span class="tag">Linux</span><span class="tag">Metasploit</span></div></div><pre class="snip"><span class="w">www-data@web01:~$ sudo -l</span>
+(root) NOPASSWD: /usr/bin/find
+<span class="r">root@web01:~#</span> <span class="m"># misconfigured sudo</span>
+<span class="w">root@web01:~# ip route</span>
+10.10.20.0/24 dev eth1
+<span class="r">[!] pivot     web01 to db01 (10.10.20.5)</span></pre></article></div>
+      <div data-r="left"><article class="card phase" data-tilt="4"><div class="phase__txt"><span class="phase__n">05</span><h3>Report and retest</h3><p>Every finding comes with severity, proof, impact and a fix your team can act on. After you patch, I test again to confirm it holds.</p><div class="tags"><span class="tag tag--hot">Severity and proof</span><span class="tag">A fix for each finding</span><span class="tag">Retest</span></div></div><pre class="snip"><span class="w">$ cat report.md</span>
+<span class="r">High    SQL injection, /item?id</span>
+        fix: parameterised queries
+<span class="r">High    Sudo misconfiguration, web01</span>
+        fix: remove the NOPASSWD rule
+Medium  SMB signing not required
+<span class="c">retest  4 of 4 fixed</span></pre></article></div>
     </div>
-    <div class="lab__more" data-r="up"><a class="btn btn--ghost mag" href="lumen/" target="_blank" rel="noopener">Open the full 3D product configurator ↗</a></div>
+    <div class="cover3">
+      <div data-r="up"><div class="card" data-tilt="6"><h3>Web applications</h3><ul class="bullets"><li>SQL injection</li><li>Cross-site scripting (XSS)</li><li>Server-side request forgery</li><li>Authentication bypass</li><li>Broken access control</li></ul></div></div>
+      <div data-r="up" style="--d:80ms"><div class="card" data-tilt="6"><h3>Networks</h3><ul class="bullets"><li>Host and service enumeration</li><li>Network exploitation</li><li>Initial footholds</li><li>Vulnerability assessment</li></ul></div></div>
+      <div data-r="up" style="--d:160ms"><div class="card" data-tilt="6"><h3>After the foothold</h3><ul class="bullets"><li>Privilege escalation</li><li>Lateral movement</li><li>Post-exploitation</li><li>Persistence</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DEFENSE ============================ -->
+<section class="section zz" id="defense" data-shape="6" data-side="left" data-op=".3">
+  <div class="ghost" aria-hidden="true">WALL</div>
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow" data-r="up">Defense</p>
+      <h2 class="h2" data-r="up" style="--d:80ms">Then I hold the wall <em>from the inside.</em></h2>
+      <p data-r="up" style="--d:160ms">Attacking networks taught me what a firewall should be catching. I have worked hands-on with Fortinet FortiGate and Palo Alto Networks firewalls and with Cortex XDR, and did SOC work on Splunk and QRadar at Cyber Force.</p>
+    </div>
+    <div class="vendors6">
+      <div data-r="up" style="--d:0ms"><div class="card vend" data-tilt="8"><span class="lg3d" style="--brand:#ee3124"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-fortinet"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-fortinet"/></svg></span><div><b>Fortinet FortiGate</b><span class="t">Next-generation firewall at the perimeter: policy, IPS, VPN.</span></div></div></div>
+      <div data-r="up" style="--d:80ms"><div class="card vend" data-tilt="8"><span class="lg3d" style="--brand:#f04e23"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg></span><div><b>Palo Alto Networks</b><span class="t">Next-generation firewall on PAN-OS: zones, App-ID, segmentation.</span></div></div></div>
+      <div data-r="up" style="--d:160ms"><div class="card vend" data-tilt="8"><span class="lg3d" style="--brand:#f04e23"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-paloaltonetworks"/></svg></span><div><b>Cortex XDR</b><span class="t">Palo Alto endpoint detection and response: one incident from many alerts.</span></div></div></div>
+      <div data-r="up" style="--d:0ms"><div class="card vend" data-tilt="8"><span class="lg3d" style="--brand:#9cf1ff"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-splunk"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-splunk"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-splunk"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-splunk"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-splunk"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-splunk"/></svg></span><div><b>Splunk</b><span class="t">SIEM: searches, detections and dashboards from the logs.</span></div></div></div>
+      <div data-r="up" style="--d:80ms"><div class="card vend" data-tilt="8"><span class="lg3d" style="--brand:#4c8dff"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-ibm"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-ibm"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-ibm"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-ibm"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-ibm"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-ibm"/></svg></span><div><b>IBM QRadar</b><span class="t">SIEM: offences, correlation rules and investigations.</span></div></div></div>
+      <div data-r="up" style="--d:160ms"><div class="card vend" data-tilt="8"><span class="lg3d" style="--brand:#3585f8"><svg class="lg" style="--i:0" aria-hidden="true"><use href="#lg-wazuh"/></svg><svg class="lg" style="--i:1" aria-hidden="true"><use href="#lg-wazuh"/></svg><svg class="lg" style="--i:2" aria-hidden="true"><use href="#lg-wazuh"/></svg><svg class="lg" style="--i:3" aria-hidden="true"><use href="#lg-wazuh"/></svg><svg class="lg" style="--i:4" aria-hidden="true"><use href="#lg-wazuh"/></svg><svg class="lg" style="--i:5" aria-hidden="true"><use href="#lg-wazuh"/></svg></span><div><b>Wazuh</b><span class="t">Open-source SIEM and XDR, the alert source behind SentinelFlow.</span></div></div></div>
+    </div>
+    <div data-r="up"><div class="card fwsim" id="fw"><div class="fwsim__head"><h3>Send a packet at the firewall</h3><span>Example policy · the first rule that matches decides</span></div><div class="fwsim__pkts" role="group" aria-label="Choose a packet to test"><button class="fw__pkt" type="button" aria-pressed="false">Internet to web-01 :443</button><button class="fw__pkt" type="button" aria-pressed="false">Internet to db-01 :3306</button><button class="fw__pkt" type="button" aria-pressed="false">VPN user to jump-01 :22</button><button class="fw__pkt" type="button" aria-pressed="false">Guest Wi-Fi to file-01 :445</button><button class="fw__pkt" type="button" aria-pressed="false">web-01 to db-01 :3306</button><button class="fw__pkt" type="button" aria-pressed="false">Internet to jump-01 :22</button></div><ol class="fwsim__rules"><li class="fw__rule"><span>untrust to dmz web-01</span><span>HTTPS 443</span><b class="a">allow + IPS</b></li><li class="fw__rule"><span>vpn to trust jump-01</span><span>SSH 22</span><b class="a">allow</b></li><li class="fw__rule"><span>dmz web-01 to trust db-01</span><span>MySQL 3306</span><b class="a">allow</b></li><li class="fw__rule"><span>trust to untrust any</span><span>HTTPS, DNS</span><b class="a">allow</b></li><li class="fw__rule"><span>guest to trust any</span><span>any</span><b class="d">deny</b></li><li class="fw__rule"><span>any to any</span><span>any</span><b class="d">deny + log</b></li></ol><p class="fwsim__verdict" id="fwVerdict" role="status" aria-live="polite">Pick a packet to see which rule catches it. FortiGate and PAN-OS both read the policy top to bottom.</p></div></div>
+    <div class="tags" data-r="up" style="margin-top:22px"><span class="tag tag--hot">Firewall configuration</span><span class="tag tag--hot">VPNs</span><span class="tag tag--hot">IDS / IPS</span><span class="tag">Alert triage</span><span class="tag">Log analysis</span><span class="tag">Incident response</span><span class="tag">Threat intelligence</span><span class="tag">Digital forensics</span><span class="tag">VLAN · VXLAN</span><span class="tag">BGP · OSPF · IS-IS</span><span class="tag">PKI</span></div>
   </div>
 </section>
 
 <!-- ============================ WORK ============================ -->
-<section class="section" id="work" data-shape="2" data-side="center" data-op=".35">
+<section class="section zz" id="work" data-shape="2" data-side="center" data-op=".35">
   <div class="ghost" aria-hidden="true">WORK</div>
   <div class="container">
     <div class="sec-head">
@@ -826,30 +1041,8 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
   </div>
 </section>
 
-<!-- ============================ PROCESS ============================ -->
-<section class="process" id="process" data-shape="3" data-side="center" data-op=".45">
-  <div class="process__stick">
-    <div class="container">
-      <div class="sec-head">
-        <p class="eyebrow">How I work</p>
-        <h2 class="h2">Five steps, <em>no surprises.</em></h2>
-      </div>
-      <div class="stage">
-        <div class="cyl" id="cyl">
-          <article class="card face" style="--i:0"><span class="face__n">01</span><h3>Discover</h3><p>A short call to map the task, the tools you already use, and what success looks like.</p></article>
-          <article class="card face" style="--i:1"><span class="face__n">02</span><h3>Plan</h3><p>A clear scope, fixed price and timeline, agreed before any work starts.</p></article>
-          <article class="card face" style="--i:2"><span class="face__n">03</span><h3>Build</h3><p>Workflows, agents or 3D pages built in small steps, with progress you can see along the way.</p></article>
-          <article class="card face" style="--i:3"><span class="face__n">04</span><h3>Secure &amp; test</h3><p>Credentials locked down, failures handled, and edge cases tested the way an attacker would.</p></article>
-          <article class="card face" style="--i:4"><span class="face__n">05</span><h3>Launch &amp; support</h3><p>Handover docs, a walkthrough video, and support after launch while your team settles in.</p></article>
-        </div>
-      </div>
-      <div class="steps-nav" id="stepsNav" aria-hidden="true"><span>Discover</span><span>Plan</span><span>Build</span><span>Secure</span><span>Launch</span></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ SKILLS ============================ -->
-<section class="section" id="skills" data-shape="4" data-side="right" data-op=".4">
+<section class="section zz" id="skills" data-shape="4" data-side="right" data-op=".4">
   <div class="ghost" aria-hidden="true">STACK</div>
   <div class="container">
     <div class="sec-head">
@@ -866,13 +1059,13 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
       <div data-r="up"><div class="card cat" data-tilt="6" style="--c:var(--violet)"><h3><i></i>3D, Web &amp; Apps</h3><div class="tags"><span class="tag">WebGL</span><span class="tag">Three.js</span><span class="tag">GLSL</span><span class="tag">PWA</span><span class="tag">JavaScript</span><span class="tag">HTML · CSS</span></div></div></div>
       <div data-r="up" style="--d:70ms"><div class="card cat" data-tilt="6" style="--c:var(--cyan)"><h3><i></i>Automation &amp; AI</h3><div class="tags"><span class="tag">n8n</span><span class="tag">AI Agents</span><span class="tag">Claude · OpenAI</span><span class="tag">RAG</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span></div></div></div>
       <div data-r="up" style="--d:140ms"><div class="card cat" data-tilt="6" style="--c:var(--signal)"><h3><i></i>Offensive Security</h3><div class="tags"><span class="tag">Network Pentest</span><span class="tag">Web Exploitation</span><span class="tag">Burp Suite</span><span class="tag">nmap</span><span class="tag">PrivEsc</span></div></div></div>
-      <div data-r="up" style="--d:210ms"><div class="card cat" data-tilt="6" style="--c:var(--ok)"><h3><i></i>SOC &amp; Defense</h3><div class="tags"><span class="tag">Splunk</span><span class="tag">QRadar</span><span class="tag">Wazuh</span><span class="tag">Alert Triage</span><span class="tag">Forensics</span></div></div></div>
+      <div data-r="up" style="--d:210ms"><div class="card cat" data-tilt="6" style="--c:var(--ok)"><h3><i></i>SOC &amp; Defense</h3><div class="tags"><span class="tag">FortiGate</span><span class="tag">Palo Alto</span><span class="tag">Cortex XDR</span><span class="tag">Splunk</span><span class="tag">QRadar</span><span class="tag">Wazuh</span><span class="tag">Alert Triage</span><span class="tag">Forensics</span></div></div></div>
     </div>
   </div>
 </section>
 
 <!-- ============================ ABOUT ============================ -->
-<section class="section" id="about" data-shape="5" data-side="left" data-op=".5">
+<section class="section zz" id="about" data-shape="5" data-side="left" data-op=".5">
   <div class="ghost" aria-hidden="true">ABOUT</div>
   <div class="container about">
     <div class="holo-wrap" data-r="left">
@@ -880,17 +1073,17 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
         <div class="holo__img" role="img" aria-label="Portrait of Youssef Mohamed Salama"></div>
         <div class="holo__tint" aria-hidden="true"></div>
         <div class="holo__scan" aria-hidden="true"></div>
-        <div class="holo__meta z2"><div><b>Youssef M. Salama</b>Automation &amp; Security Engineer</div><i>online</i></div>
+        <div class="holo__meta z2"><div><b>Youssef M. Salama</b>Penetration Tester</div><i>online</i></div>
       </div>
       <span class="corner corner--tl"></span><span class="corner corner--tr"></span><span class="corner corner--bl"></span><span class="corner corner--br"></span>
       <span class="float-badge float-badge--a"><b>Top 3%</b> · TryHackMe</span>
-      <span class="float-badge float-badge--b"><b>n8n</b> · AI agents</span>
+      <span class="float-badge float-badge--b"><b>PT1</b> · certified</span>
     </div>
     <div class="about__text">
       <p class="eyebrow" data-r="up">About</p>
       <h2 class="h2" data-r="up" style="--d:80ms">Automation that works. <em>Security that holds.</em></h2>
       <p data-r="up" style="--d:140ms">I'm <strong>Youssef Mohamed Salama</strong>, a Computer Engineer with a Cyber Security specialization from King Salman International University, class of 2026. I build the things businesses run on and show off: <strong>immersive 3D websites</strong>, <strong>web and mobile apps</strong>, <strong>n8n automations</strong> and <strong>AI agents</strong>.</p>
-      <p data-r="up" style="--d:200ms">My security background is what makes the difference. Six months at <strong>Cyber Force</strong> meant SOC work, SIEM on Splunk and QRadar, threat intelligence and incident response, and I still train offense on TryHackMe and Hack The Box. So every workflow I ship treats credentials, customer data and failures the way an attacker would test them.</p>
+      <p data-r="up" style="--d:200ms">My security background is what makes the difference. Six months at <strong>Cyber Force</strong> meant SOC work, SIEM on Splunk and QRadar, threat intelligence and incident response, hands-on work with <strong>Fortinet FortiGate and Palo Alto Networks firewalls and Cortex XDR</strong>, and I still train offense on TryHackMe and Hack The Box. So every workflow I ship treats credentials, customer data and failures the way an attacker would test them.</p>
       <div class="tags" data-r="up" style="--d:260ms"><span class="tag">Based in Egypt</span><span class="tag">Arabic · English</span><span class="tag tag--hot">Available for freelance projects</span></div>
       <div class="stats">
         <div class="stat" data-r="flip" style="--d:0ms"><b data-count="3" data-suffix="%">0%</b><span>Top on TryHackMe</span></div>
@@ -903,7 +1096,7 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
 </section>
 
 <!-- ============================ EXPERIENCE ============================ -->
-<section class="section" id="experience" data-shape="6" data-side="center" data-op=".35">
+<section class="section zz" id="experience" data-shape="6" data-side="center" data-op=".35">
   <div class="ghost" aria-hidden="true">PATH</div>
   <div class="container">
     <div class="sec-head">
@@ -933,7 +1126,7 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
 </section>
 
 <!-- ============================ ARENA ============================ -->
-<section class="section" id="arena" data-shape="7" data-side="center" data-op=".35">
+<section class="section zz" id="arena" data-shape="7" data-side="center" data-op=".35">
   <div class="ghost" aria-hidden="true">ARENA</div>
   <div class="container">
     <div class="sec-head">
@@ -963,8 +1156,118 @@ body.cur-hover .cur-ring{width:64px;height:64px;margin:-32px 0 0 -32px;border-co
   </div>
 </section>
 
+<!-- ============================ SERVICES ============================ -->
+<section class="section zz" id="services" data-shape="1" data-side="left" data-op=".55">
+  <div class="ghost" aria-hidden="true">BUILD</div>
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow" data-r="up">What I build</p>
+      <h2 class="h2" data-r="up" style="--d:80ms">3D worlds people remember, <em>systems that run themselves.</em></h2>
+      <p data-r="up" style="--d:160ms">Six things I build for clients. Each one starts with a fixed scope and price, ships with security and error handling built in, and ends with a walkthrough.</p>
+    </div>
+    <div class="svc-grid">
+      <div data-r="up" style="--d:0ms"><article class="card svc svc--hot" data-tilt="10">
+        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
+        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><path d="M4 7.4l8 4.6 8-4.6M12 12v9.2"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">01</span></div>
+        <h3 class="z2">3D Websites</h3>
+        <p class="z1">Immersive landing pages and product showcases with real-time 3D: models people can rotate, scenes that react to scroll, and motion that makes a brand impossible to forget.</p>
+        <div class="tags z1"><span class="tag tag--hot">WebGL</span><span class="tag">Three.js</span><span class="tag">GLSL shaders</span><span class="tag">3D models</span><span class="tag">Scroll motion</span></div>
+      </article></div>
+      <div data-r="up" style="--d:80ms"><article class="card svc svc--hot" data-tilt="10">
+        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
+        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">02</span></div>
+        <h3 class="z2">Web &amp; Mobile Apps</h3>
+        <p class="z1">Complete apps for real operations, from customer portals to resident apps with QR access, payments and live requests. Mobile-first, bilingual, and installable on any phone.</p>
+        <div class="tags z1"><span class="tag tag--hot">PWA</span><span class="tag">iOS · Android</span><span class="tag">Dashboards</span><span class="tag">Payments</span><span class="tag">Arabic · English</span></div>
+      </article></div>
+      <div data-r="up" style="--d:160ms"><article class="card svc svc--hot" data-tilt="10">
+        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
+        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><ellipse cx="12" cy="12" rx="9.5" ry="4" transform="rotate(-25 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="4" transform="rotate(35 12 12)"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">03</span></div>
+        <h3 class="z2">Interactive 3D Experiences</h3>
+        <p class="z1">Product configurators, 3D data dashboards, interactive maps and site models that let people explore instead of scrolling past.</p>
+        <div class="tags z1"><span class="tag tag--hot">Configurators</span><span class="tag">3D data viz</span><span class="tag">Interactive maps</span><span class="tag">Digital twins</span></div>
+      </article></div>
+      <div data-r="up" style="--d:0ms"><article class="card svc" data-tilt="10">
+        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
+        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="6" rx="1.5"/><rect x="15" y="14" width="6" height="6" rx="1.5"/><path d="M9 7h4a2 2 0 0 1 2 2v5"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">04</span></div>
+        <h3 class="z2">n8n Automation</h3>
+        <p class="z1">Workflows that move data between your apps, follow up with leads, process orders and send reports on schedule, with retries and error alerts so nothing fails silently.</p>
+        <div class="tags z1"><span class="tag tag--hot">n8n</span><span class="tag">Webhooks</span><span class="tag">REST APIs</span><span class="tag">CRM</span><span class="tag">Self-hosted</span></div>
+      </article></div>
+      <div data-r="up" style="--d:80ms"><article class="card svc" data-tilt="10">
+        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
+        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4"/><circle cx="9" cy="13.5" r="1.2" fill="currentColor"/><circle cx="15" cy="13.5" r="1.2" fill="currentColor"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">05</span></div>
+        <h3 class="z2">AI Agents &amp; Chatbots</h3>
+        <p class="z1">Assistants that answer your customers in English and Arabic from your own documents, book appointments, and hand off to a human when it matters.</p>
+        <div class="tags z1"><span class="tag tag--hot">Claude</span><span class="tag">OpenAI</span><span class="tag">RAG</span><span class="tag">WhatsApp</span><span class="tag">Web chat</span></div>
+      </article></div>
+      <div data-r="up" style="--d:160ms"><article class="card svc" data-tilt="10">
+        <div class="svc__clip" aria-hidden="true"><div class="svc__shine"></div></div>
+        <div class="svc__top z2"><div class="cube" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 7.8-8 9-4.6-1.2-8-4.5-8-9V6l8-3z"/><path d="M8.5 12.5l2.3 2.3 4.7-4.8"/></svg></i><i></i><i></i><i></i><i></i><i></i></div><span class="svc__num">06</span></div>
+        <h3 class="z2">Security Automation &amp; Testing</h3>
+        <p class="z1">Alert triage, threat-intel enrichment and automated response for your SOC, plus penetration testing for the sites and apps you already run.</p>
+        <div class="tags z1"><span class="tag tag--hot">Wazuh</span><span class="tag">SIEM</span><span class="tag">Pentest</span><span class="tag">Hardening</span><span class="tag">Secure code</span></div>
+      </article></div>
+    </div>
+    </div>
+</section>
+
+<!-- ============================ 3D LAB ============================ -->
+<section class="section zz" id="lab" data-shape="1" data-side="center" data-op=".12">
+  <div class="ghost" aria-hidden="true">LAB</div>
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow" data-r="up">3D Lab · live in your browser</p>
+      <h2 class="h2" data-r="up" style="--d:80ms">Don't take my word for it. <em>Spin it.</em></h2>
+      <p data-r="up" style="--d:160ms">Three real-time WebGL demos, running on your device right now. The same techniques power the 3D websites and apps I build for clients.</p>
+    </div>
+    <div class="lab">
+      <div class="lab__stage" id="labStage" data-active="product" data-r="zoom">
+        <canvas id="labCv" aria-label="Live 3D demo, drag to rotate"></canvas>
+        <div class="lab__hud"><span class="lab__live">Live WebGL</span><span>Drag to rotate</span></div>
+        <div class="lab__cfg">
+          <button class="sw on" style="--c:#3ad7f2" data-swatch="#3ad7f2" aria-label="Cyan"></button>
+          <button class="sw" style="--c:#8b7bff" data-swatch="#8b7bff" aria-label="Violet"></button>
+          <button class="sw" style="--c:#ff6a3d" data-swatch="#ff6a3d" aria-label="Signal orange"></button>
+          <button class="sw" style="--c:#f5c451" data-swatch="#f5c451" aria-label="Gold"></button>
+          <button class="sw" style="--c:#43e38a" data-swatch="#43e38a" aria-label="Mint"></button>
+          <button class="fin on" data-finish="1">Gloss</button><button class="fin" data-finish="0">Matte</button>
+        </div>
+      </div>
+      <div class="lab__side" role="tablist" aria-label="Choose a demo">
+        <button class="demo-tab" role="tab" aria-selected="true" data-demo="product" data-r="right"><small>01 · Product</small><b>3D product configurator</b><span>Rotate the product, then switch its color and finish live. Built for launches and online stores.</span></button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-demo="globe" data-r="right" style="--d:80ms"><small>02 · Data</small><b>Live data globe</b><span>Thousands of points and animated routes: a hero that makes a dashboard or a logistics brand feel alive.</span></button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-demo="terrain" data-r="right" style="--d:160ms"><small>03 · Experience</small><b>Retro-future flyover</b><span>An endless generated landscape for immersive landing pages, events and games.</span></button>
+      </div>
+    </div>
+    <div class="lab__more" data-r="up"><a class="btn btn--ghost mag" href="lumen/" target="_blank" rel="noopener">Open the full 3D product configurator ↗</a></div>
+  </div>
+</section>
+
+<!-- ============================ PROCESS ============================ -->
+<section class="process zz" id="process" data-shape="3" data-side="center" data-op=".45">
+  <div class="process__stick">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow">How I work</p>
+        <h2 class="h2">Five steps, <em>no surprises.</em></h2>
+      </div>
+      <div class="stage">
+        <div class="cyl" id="cyl">
+          <article class="card face" style="--i:0"><span class="face__n">01</span><h3>Discover</h3><p>A short call to map the task, the tools you already use, and what success looks like.</p></article>
+          <article class="card face" style="--i:1"><span class="face__n">02</span><h3>Plan</h3><p>A clear scope, fixed price and timeline, agreed before any work starts.</p></article>
+          <article class="card face" style="--i:2"><span class="face__n">03</span><h3>Build</h3><p>Workflows, agents or 3D pages built in small steps, with progress you can see along the way.</p></article>
+          <article class="card face" style="--i:3"><span class="face__n">04</span><h3>Secure &amp; test</h3><p>Credentials locked down, failures handled, and edge cases tested the way an attacker would.</p></article>
+          <article class="card face" style="--i:4"><span class="face__n">05</span><h3>Launch &amp; support</h3><p>Handover docs, a walkthrough video, and support after launch while your team settles in.</p></article>
+        </div>
+      </div>
+      <div class="steps-nav" id="stepsNav" aria-hidden="true"><span>Discover</span><span>Plan</span><span>Build</span><span>Secure</span><span>Launch</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ CONTACT ============================ -->
-<section class="section" id="contact" data-shape="8" data-side="center" data-op=".75">
+<section class="section zz" id="contact" data-shape="8" data-side="center" data-op=".75">
   <div class="ring" aria-hidden="true"><div class="ring__in" id="ring"></div></div>
   <div class="container contact">
     <p class="eyebrow" data-r="up">Contact</p>
@@ -1018,7 +1321,7 @@ $$('#name .row').forEach(function(row){
 });
 
 /* ---------------- ribbons ---------------- */
-var wa = ['3D websites','web & mobile apps','WebGL','product configurators','n8n automation','AI agents','chatbots','security automation','pentesting'];
+var wa = ['penetration testing','web exploitation','FortiGate','Palo Alto','Cortex XDR','privilege escalation','SIEM','incident response','3D websites','n8n automation'];
 var wb = ['built securely','fixed price','clean handover','English & Arabic','fast on mobile','self-hosted','no shortcuts'];
 var mk = function(w){ var h = w.map(function(x){ return '<span>' + x + '</span>'; }).join(''); return h + h; };
 $('#ribA').innerHTML = mk(wa); $('#ribB').innerHTML = mk(wb);
@@ -1035,7 +1338,7 @@ $('#ring').innerHTML = ringWords.map(function(w, i){ return '<span style="--a:' 
 /* ---------------- typed role ---------------- */
 (function(){
   var el = $('#typed'); if (reduce) return;
-  var words = ['3D Web Developer','Web & Mobile App Developer','n8n Automation Developer','AI Agent Builder','Security Engineer'];
+  var words = ['Penetration Tester','Network Security Engineer','FortiGate & Palo Alto','Cortex XDR','Secure 3D Web & Automation'];
   var w = 0, i = words[0].length, del = true;
   (function tick(){
     var word = words[w]; i += del ? -1 : 1; el.textContent = word.slice(0, i);
@@ -1064,12 +1367,12 @@ if (finePointer && !reduce) {
     var max = +el.getAttribute('data-tilt') || 8;
     el.addEventListener('pointermove', function(e){
       var b = el.getBoundingClientRect(), px = (e.clientX - b.left) / b.width, py = (e.clientY - b.top) / b.height;
-      el.classList.add('tilting');
+      el.classList.add('tilting'); el.classList.add('tilt3d'); clearTimeout(el.__t3);
       el.style.setProperty('--ry', ((px - .5) * max * 2).toFixed(2) + 'deg');
       el.style.setProperty('--rx', (-(py - .5) * max * 2).toFixed(2) + 'deg');
       el.style.setProperty('--gx', (px * 100).toFixed(1) + '%'); el.style.setProperty('--gy', (py * 100).toFixed(1) + '%');
     });
-    el.addEventListener('pointerleave', function(){ el.classList.remove('tilting'); el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); });
+    el.addEventListener('pointerleave', function(){ el.classList.remove('tilting'); el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); el.__t3 = setTimeout(function(){ el.classList.remove('tilt3d'); }, 640); });
   });
   /* magnetic buttons */
   $$('.mag').forEach(function(el){
@@ -1112,7 +1415,7 @@ var stackEl = $('#stack3d');
 var ELS = {
   A: [['N8','n8n','#3ad7f2'],['Cl','Claude API','#3ad7f2'],['Oa','OpenAI API','#3ad7f2'],['Wh','Webhooks','#3ad7f2'],['Dk','Docker','#3ad7f2'],['Pg','PostgreSQL','#3ad7f2'],
       ['Tj','Three.js','#8b7bff'],['Gl','WebGL','#8b7bff'],['Sh','GLSL shaders','#8b7bff'],['Js','JavaScript','#8b7bff'],['Pw','PWA apps','#8b7bff'],['Hc','HTML · CSS','#8b7bff']],
-  B: [['Wz','Wazuh','#43e38a'],['Sp','Splunk','#43e38a'],['Qr','QRadar','#43e38a'],['Su','Suricata','#43e38a'],['Ws','Wireshark','#43e38a'],
+  B: [['Fg','FortiGate','#43e38a'],['Pa','Palo Alto','#43e38a'],['Cx','Cortex XDR','#43e38a'],['Wz','Wazuh','#43e38a'],['Sp','Splunk','#43e38a'],['Qr','QRadar','#43e38a'],['Su','Suricata','#43e38a'],['Ws','Wireshark','#43e38a'],
       ['Bp','Burp Suite','#ff6a3d'],['Nm','nmap','#ff6a3d'],['Ms','Metasploit','#ff6a3d'],['Kl','Kali Linux','#ff6a3d'],['Py','Python','#ff6a3d'],['Lx','Linux','#ff6a3d'],['C+','C++','#ff6a3d']]
 };
 var rings = [], num = 0;
@@ -1133,7 +1436,7 @@ function drawStack(){
   if (!stackVisible) return;
   if (!stDrag) stRot.v = lerp(stRot.v, .004, .02);
   stRot.a += reduce ? 0 : stRot.v;
-  var R = Math.min(stackEl.clientWidth * .36, 400);
+  var R = Math.min(M.stackW * .36, 400);
   rings.forEach(function(rg){
     var n = rg.items.length;
     for (var i = 0; i < n; i++) {
@@ -1148,17 +1451,17 @@ function drawStack(){
 var devices = $('#devices');
 function drawDevices(){
   if (!devices) return;
-  var r = devices.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return;
-  var p = smooth((vh - r.top) / (vh * .95));
-  devices.style.setProperty('--dy', (lerp(-30, -10, p) + mouse.sx * 7).toFixed(2) + 'deg');
-  devices.style.setProperty('--dx', (lerp(20, 6, p) - mouse.sy * 5).toFixed(2) + 'deg');
+  var rt = M.dev.top - scrollY; if (rt + M.dev.h < 0 || rt > vh) return;
+  var p = smooth((vh - rt) / (vh * .95));
+  put(devices, '--dy', (lerp(-30, -10, p) + mouse.sx * 7).toFixed(2) + 'deg');
+  put(devices, '--dx', (lerp(20, 6, p) - mouse.sy * 5).toFixed(2) + 'deg');
 }
 
 /* ---------------- terminal ---------------- */
 var term = $('#term'), out = $('#termOut'), tin = $('#termIn'), hist = [], hi = -1;
 var esc = function(s){ return String(s).replace(/[&<>]/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); };
 var line = function(cls, txt, raw){ out.insertAdjacentHTML('beforeend', '<span class="' + cls + '">' + (raw ? txt : esc(txt)) + '</span>\n'); out.scrollTop = out.scrollHeight; };
-var sections = ['services','work','lab','process','skills','about','experience','arena','contact'];
+var sections = ['film','pentest','defense','work','skills','about','experience','arena','services','lab','process','contact'];
 var CMDS = {
   help: [['w','available commands'],['','  whoami      who is behind the keyboard'],['','  services    what I build for clients'],['','  projects    icg, sentinelflow, nour, leadflow'],['','  lab         open the live 3d demos'],['','  skills      the stack'],['','  exp         experience & education'],['','  ctf         platforms & ranks'],['','  contact     email & whatsapp'],['','  cv          open the résumé'],['','  cd <sec>    jump to a section ('+ sections.join(', ') +')'],['','  clear       clear the screen']],
   whoami: [['w','youssef mohamed salama'],['','3d websites · apps · ai automation · cyber security · egypt'],['','b.sc. computer engineering (cyber security), ksiu 2026'],['k','[+] status: available for freelance projects']],
@@ -1277,7 +1580,7 @@ try { GL = (function(){
   function setPair(a, b){ var k = a + '-' + b; if (k === pair) return; pair = k; gl.bindBuffer(gl.ARRAY_BUFFER, bA); gl.bufferSubData(gl.ARRAY_BUFFER, 0, shape(a)); gl.bindBuffer(gl.ARRAY_BUFFER, bB); gl.bufferSubData(gl.ARRAY_BUFFER, 0, shape(b)); }
   gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE); gl.disable(gl.DEPTH_TEST); gl.clearColor(0, 0, 0, 0);
 
-  function resize(){ var w = innerWidth, h = innerHeight; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); gl.viewport(0, 0, cv.width, cv.height); }
+  function resize(){ var w = Math.round((cv.clientWidth || innerWidth) * dpr), h = Math.round((cv.clientHeight || innerHeight) * dpr); if (w === cv.width && h === cv.height) return; cv.width = w; cv.height = h; gl.viewport(0, 0, w, h); }
   resize();
   function persp(fov, asp, n, f){ var t = 1 / Math.tan(fov / 2); return new Float32Array([t / asp,0,0,0, 0,t,0,0, 0,0,(f + n) / (n - f),-1, 0,0,2 * f * n / (n - f),0]); }
   function mv(yaw, pitch, roll, tx, ty, tz, s){
@@ -1311,17 +1614,22 @@ function measure(){
   vw = innerWidth; vh = innerHeight;
   secs = $$('[data-shape]').map(function(el){ var r = el.getBoundingClientRect(), top = r.top + scrollY; return { el: el, id: el.id, shape: +el.getAttribute('data-shape'), side: el.getAttribute('data-side'), op: +el.getAttribute('data-op'), anchor: top + Math.min(r.height, vh * 1.6) * .5 - vh * .5 }; });
   if (GL) GL.resize();
+  var at = function(el){ var t = 0, e = el; while (e) { t += e.offsetTop; e = e.offsetParent; } return { top: t, h: el.offsetHeight }; };
+  M = { maxS: doc.documentElement.scrollHeight - vh, mon: at(monitor), proc: at(procSec), tl: at(tl), dev: devices ? at(devices) : null, stackW: stackEl.clientWidth };
 }
+var M, mq = 0, glIdle = false;
+function put(el, k, v){ var c = el.__pv || (el.__pv = {}); if (c[k] !== v) { c[k] = v; el.style.setProperty(k, v); } }
 measure(); addEventListener('resize', function(){ measure(); }); addEventListener('load', measure);
+if ('ResizeObserver' in window) new ResizeObserver(function(){ if (!mq) { mq = 1; requestAnimationFrame(function(){ mq = 0; measure(); }); } }).observe(doc.body);
 var st = { yaw: 0, tx: 0, alpha: 1, mx: 0, my: 0 }, t0 = performance.now(), activeNav = '';
 var sideX = function(s){ return GL && GL.mobile ? 0 : s === 'right' ? 1.55 : s === 'left' ? -1.55 : 0; };
 
 function frame(now){
-  var t = (now - t0) / 1000, y = scrollY, maxS = doc.documentElement.scrollHeight - vh;
+  var t = (now - t0) / 1000, y = scrollY, maxS = M.maxS;
   mouse.sx = lerp(mouse.sx, mouse.nx, .06); mouse.sy = lerp(mouse.sy, mouse.ny, .06);
 
   // progress + nav
-  prog.style.transform = 'scaleX(' + (maxS > 0 ? y / maxS : 0).toFixed(4) + ')';
+  put(prog, 'transform', 'scaleX(' + (maxS > 0 ? clamp(y / maxS, 0, 1) : 0).toFixed(4) + ')');
   nav.classList.toggle('solid', y > 40);
 
   // which pair of sections are we between?
@@ -1336,30 +1644,29 @@ function frame(now){
     var tx = lerp(sideX(a.side), sideX(b.side), m), al = lerp(a.op, b.op, m) * (GL.mobile ? .55 : 1);
     st.tx = lerp(st.tx, tx, .08); st.alpha = lerp(st.alpha, al, .08);
     var yaw = t * (reduce ? 0 : .07) + y * .0006 + mouse.sx * .35, pitch = .25 + mouse.sy * .18 + Math.sin(t * .2) * .05;
-    GL.draw(t, a === b ? 0 : m, yaw, pitch, Math.sin(t * .13) * .06, st.tx, 0, st.alpha, 1);
+    if (st.alpha > .004 || !glIdle) { GL.draw(t, a === b ? 0 : m, yaw, pitch, Math.sin(t * .13) * .06, st.tx, 0, st.alpha, 1); glIdle = st.alpha <= .004; }
   }
 
   // hero parallax
   if (y < vh * 1.2) {
-    heroTxt.style.setProperty('--mx', mouse.sx.toFixed(3)); heroTxt.style.setProperty('--my', mouse.sy.toFixed(3));
-    if (orbitals) { orbitals.style.setProperty('--mx', mouse.sx.toFixed(3)); orbitals.style.setProperty('--my', mouse.sy.toFixed(3)); }
+    put(heroTxt, '--mx', mouse.sx.toFixed(3)); put(heroTxt, '--my', mouse.sy.toFixed(3));
+    if (orbitals) { put(orbitals, '--mx', mouse.sx.toFixed(3)); put(orbitals, '--my', mouse.sy.toFixed(3)); }
   }
 
   // featured monitor straightens as it scrolls in
-  var mr = monitor.getBoundingClientRect();
-  if (mr.bottom > 0 && mr.top < vh) monitor.style.setProperty('--p', smooth((vh - mr.top) / (vh * .75)).toFixed(3));
+  var mt = M.mon.top - y;
+  if (mt + M.mon.h > 0 && mt < vh) put(monitor, '--p', smooth((vh - mt) / (vh * .75)).toFixed(3));
 
   // process cylinder
-  if (vw > 760) {
-    var pr = procSec.getBoundingClientRect(), pk = clamp(-pr.top / (pr.height - vh), 0, 1), n = faces.length;
+  if (vw > 760 && M.proc.top - y < vh * 1.5 && M.proc.top + M.proc.h - y > -vh * .5) {
+    var pk = clamp((y - M.proc.top) / Math.max(1, M.proc.h - vh), 0, 1), n = faces.length;
     var step = pk * (n - 1), idx = Math.round(step);
-    cyl.style.setProperty('--rot', (-step * 360 / n).toFixed(2) + 'deg');
+    put(cyl, '--rot', (-step * 360 / n).toFixed(2) + 'deg');
     for (var f = 0; f < n; f++) { faces[f].classList.toggle('on', f === idx); stepsNav[f].classList.toggle('on', f === idx); }
   }
 
   // timeline line grows with scroll
-  var tr = tl.getBoundingClientRect();
-  tlLine.style.setProperty('--p', clamp((vh * .6 - tr.top) / tr.height, 0, 1).toFixed(3));
+  put(tlLine, '--p', clamp((vh * .6 - (M.tl.top - y)) / Math.max(1, M.tl.h), 0, 1).toFixed(3));
 
   // stack rings + devices
   drawStack(); drawDevices();
@@ -1545,7 +1852,7 @@ var G3 = {
   var t0 = performance.now(), reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   (function loop(now){
     requestAnimationFrame(loop);
-    if (!vis.on) return;
+    if (!vis.on && (vis.w || now < 1700)) return; vis.w = 1;
     var t = reduce ? 4 : (now - t0) / 1000;
     if (!drag) { rot.vy += (.004 - rot.vy) * .03; rot.vx *= .9; }
     rot.y += reduce ? 0 : rot.vy; rot.x = Math.max(-.6, Math.min(1.1, rot.x + rot.vx));
@@ -1601,7 +1908,7 @@ var G3 = {
   var t0 = performance.now(), reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   (function loop(now){
     requestAnimationFrame(loop);
-    if (!vis.on) return;
+    if (!vis.on && (vis.w || now < 2400)) return; vis.w = 1;
     var t = (now - t0) / 1000; boost = Math.max(0, boost - .004);
     wave = reduce ? 1.2 : ((t * .22) % 1.6) + boost * 1.6;
     var asp = G3.fit(gl, cv, dpr);
@@ -1632,6 +1939,303 @@ var G3 = {
   Array.prototype.forEach.call(document.querySelectorAll('[data-app]'), function(b){
     b.addEventListener('click', function(){ toastEl.textContent = b.getAttribute('data-app'); toastEl.classList.add('on'); clearTimeout(tt); tt = setTimeout(function(){ toastEl.classList.remove('on'); }, 1800); if (b.classList.contains('sos')) drawQR(); });
   });
+})();
+</script>
+<script>
+/* =====================================================================
+   One solid world behind the whole page, and the scroll bar is the camera.
+   Everything is an instanced, lit cube: a voxel Earth built from real land
+   data (Natural Earth, public domain), a brick firewall, server racks, a
+   second wall, desks with screens, an XDR core. The page scrolls through
+   it as a film: five acts of an attack being stopped, then a tour of the
+   defended network behind the rest of the portfolio.
+   Hand-written WebGL2, no libraries.
+   ===================================================================== */
+(function(){
+'use strict';
+var cv = document.getElementById('world'), root = document.documentElement, film = document.getElementById('film');
+if (!cv) return;
+var gl = null;
+try { gl = cv.getContext('webgl2', { antialias: true, alpha: false, powerPreference: 'high-performance' }); } catch (e) {}
+function flat(){ root.classList.add('no-gl'); if (film) film.classList.add('film--flat'); }
+if (!gl) { flat(); return; }
+var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var seed = 4242, RAD = Math.PI / 180;
+function rnd(){ seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+function R(a, b){ return a + (b - a) * rnd(); }
+function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+function lerp(a, b, t){ return a + (b - a) * t; }
+function smooth(t){ t = clamp(t, 0, 1); return t * t * (3 - 2 * t); }
+
+/* ---------------- the cast: every object is one instance of a cube ----------------
+   kind 0 still, 1 travels a to b, 2 travels and bursts on arrival, 3 tile on the globe,
+   4 orbits b, 5 a step of the intruder's path, 6 floor, 7 server rack */
+var I = [], STEEL = [.13, .16, .23], ICE = [.14, .7, .95], RED = [1, .16, .2], GOLD = [.62, .52, 1], WHITE = [.85, .9, 1];
+function cube(a, s, c, em, kind, ap, va, b, speed, phase){
+  b = b || a;
+  I.push(a[0], a[1], a[2], b[0], b[1], b[2], s[0], s[1], s[2], c[0], c[1], c[2], em || 0, kind || 0, speed || 0, phase || 0, ap == null ? -1 : ap, va == null ? 99 : va);
+}
+
+/* act 1: the Earth */
+var GR = 5, GOUT = 1.45, LAND = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPCf//8HAAAAAAAAAAAAAAAAyPzz//8A4AAAAAADAAAAAACAlAnw//8AAAAAB4AfAAAAAADAAywA/P8AAABgAP4fAAEAAQIAPvYH+H8AAABguP//7x8A4P//K9wc+B8AgH+g1///////z////z98+AMC4L/8////////AP///684+AAB8P7///////9/wP///wMGcAAAfP7//////38fgAf+/wdeAAAAfP7//////wEBAAH4/x9+AABAKP//////f8ABAADw/3//AQCw+P///////8AAAADg////AwDA/////////wAAAADA//8vBwDA/////////wAAAADA//8/AACA/6//////fwAAAADA//8PAACA1wf/////PwIAAADA//8HAADwYW//////DwEAAACA//8DAADwQPn///9/BAEAAACA//8DAAAAD+D/////yAAAAAAA/v8BAADgD8D/////IAAAAAAA+n8AAADwf9f/////AQAAAAAA/IMAAADw///3////AQAAAAAA8IEAAAD8/7/P////AAAAAAAA4AEAAAD8/79/+P9/AQAAAAAAwBEAAAD+/3//8OcHAAAAAAAAwBsYAAD8/39/4MMLAAAAAAAAAB4AAAD+//8e4IEHAQAAAAAAAHAAAAD+//8HwIAPAwAAAAAAAAAUAAD8//8JwIAGAAAAAAAAAID+AAD4//8PAIAABAAAAAAAAAD+AQDw/f8PAAEBAAAAAAAAAAD+DwAA8P8HAIBhAAAAAAAAAAD/DwAA8P8DAABzAAAAAAAAAAD/PwAA8P8BAABzMQAAAAAAAAD//wEA8P8AAAACwQMAAAAAAAD//wMA4P8AAAAEgAcAAAAAAAD//wMA4P8AAACABQEAAAAAAAD+/wEA4P8AAAAAAAAAAAAAAAD+/wAA4P8IAAAAMAAAAAAAAAD4/wAA4P8MAAAAfgIAAAAAAADw/wAA4D8MAAAA/gcAAAAAAADw/wAA4D8GAADA/w8AAAAAAADwPwAAwD8GAADg/w8AAAAAAADwHwAAwB8AAADg/x8AAAAAAAD4DwAAgB8AAADA/x8AAAAAAAD4DwAAgA8AAADA/x8AAAAAAAD4BwAAgAMAAADAwx8AAAAAAAD4AQAAAAAAAAAAAA8AAAAAAAD4AAAAAAAAAAAAAARAAAAAAAA8AAAAAAAAAAAAAAQgAAAAAAA4AAAAAAAAAAAAAAAQAAAAAAAcAAAAAAAAAAAAAAAIAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAMAQAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAAABgAAAiAAAAAAAAAAAgAAAAACD+j////x8AAAAAAAB8AACg////5/////8PAACAgP/9AAD+//////////8HAMD///8PAMD///////////8BgPz///8BcPz///////////8HAPz///8fAP7///////////8AAPj///////////////////8P////////////////////////////////////////////////', GW = 144, GH = 72, i, j, r, x, c, q;
+function ll(lat, lon, rr){ var a = lat * RAD, o = lon * RAD, k = Math.cos(a) * (rr || GR); return [k * Math.sin(o), Math.sin(a) * (rr || GR), k * Math.cos(o)]; }
+var bin = atob(LAND);
+for (i = 0; i < GH; i++) {
+  var lat = 90 - (i + .5) * 2.5, cl = Math.cos(lat * RAD);
+  for (j = 0; j < GW; j++) {
+    var idx = i * GW + j, land = (bin.charCodeAt(idx >> 3) >> (idx & 7)) & 1, hgt = land ? R(.08, .24) : .03;
+    cube(ll(lat, -180 + (j + .5) * 2.5, GR + hgt / 2), [.224 * cl + .004, hgt, .224], land ? [.08 + rnd() * .06, .46 + rnd() * .22, .6 + rnd() * .1] : [.014, .034, .09], land ? .1 : 0, 3, -1, GOUT);
+  }
+}
+var TLAT = 30.04, TLON = 31.24, TGT = ll(TLAT, TLON, GR + .1);
+cube(ll(TLAT, TLON, GR + .8), [.07, 1.5, .07], GOLD, 2.4, 3, -1, GOUT);
+cube(ll(TLAT, TLON, GR + .3), [.34, .05, .34], GOLD, 1.8, 3, .05, GOUT);
+[[55,-100],[8,-72],[52,6],[61,96],[23,113],[-27,134],[-13,-50],[37,139],[4,18]].forEach(function(o, k){
+  var a = ll(o[0], o[1], 1), b = ll(TLAT, TLON, 1), om = Math.acos(clamp(a[0]*b[0] + a[1]*b[1] + a[2]*b[2], -1, 1)), so = Math.sin(om), N = 46, prev = null, ap = .1 + k * .075, s, t, k1, k2, lift, p;
+  for (s = 0; s <= N; s++) {
+    t = s / N; k1 = Math.sin((1 - t) * om) / so; k2 = Math.sin(t * om) / so; lift = GR * (1.03 + .3 * Math.sin(Math.PI * t) * om / 2);
+    p = [(a[0]*k1 + b[0]*k2) * lift, (a[1]*k1 + b[1]*k2) * lift, (a[2]*k1 + b[2]*k2) * lift];
+    if (prev) cube(prev, [.075, .075, .075], RED, 2.6, 1, ap + t * .3, GOUT, p, 1.1, 0);
+    prev = p;
+  }
+  cube(ll(o[0], o[1], GR + .45), [.09, .8, .09], RED, 2.2, 3, ap - .05, GOUT);
+});
+for (i = 0; i < 340; i++) { q = [R(-110, 110), R(-60, 80), R(-150, 70)]; if (Math.hypot(q[0], q[1], q[2]) > 30) cube(q, [.16, .16, .16], WHITE, R(.8, 1.8), 0); }
+
+/* acts 2 to 5: the network */
+var NA = 1.3;
+cube([0, -2.1, -20], [70, .2, 124], [.03, .04, .075], 0, 6, NA);
+for (r = 0; r < 11; r++) for (x = -10.5 + (r % 2) * .7; x <= 10.6; x += 1.4) {
+  if (r < 4 && Math.abs(x) < 1.6) continue;
+  cube([x, -1.7 + r * .6, -12 + R(-.07, .07)], [1.33, .54, .62], [.05 + rnd() * .03, .15 + rnd() * .09, .4 + rnd() * .16], .06, 0, NA + rnd() * .22);
+}
+cube([-1.78, -.8, -12], [.2, 2.5, .82], ICE, 1.4, 0, NA); cube([1.78, -.8, -12], [.2, 2.5, .82], ICE, 1.4, 0, NA); cube([0, .55, -12], [3.76, .2, .82], ICE, 1.4, 0, NA);
+var RACKS = [[-3.4,-17],[-3.4,-21],[-3.4,-25],[3.4,-17],[3.4,-21],[3.4,-25]];
+RACKS.forEach(function(k){ cube([k[0], -.7, k[1]], [1.2, 2.6, 1.2], [.07, .09, .13], 0, 7, NA); cube([k[0], .63, k[1]], [1.24, .05, 1.24], ICE, 1, 0, NA); });
+for (c = 0; c < 9; c++) for (r = 0; r < 3; r++) { if (c === 4 && r === 0) continue; cube([-7.2 + c * 1.8, -1.1 + r * 1.8, -32], [1.68, 1.68, .42], [.05, .18 + rnd() * .07, .32 + rnd() * .12], .05, 0, NA + rnd() * .2); }
+cube([-.98, -1.1, -32], [.14, 1.8, .6], ICE, 1.4, 0, NA); cube([.98, -1.1, -32], [.14, 1.8, .6], ICE, 1.4, 0, NA); cube([0, -.13, -32], [2.1, .14, .6], ICE, 1.4, 0, NA);
+var WS = [];
+[-40, -44, -48, -52].forEach(function(z){ [-7, -3, 3, 7].forEach(function(xx){
+  WS.push([xx, -1.2, z]);
+  cube([xx, -1.5, z], [1.1, .08, .74], STEEL, 0, 0, NA); cube([xx, -1.8, z], [.9, .5, .08], [.06, .08, .11], 0, 0, NA);
+  cube([xx, -1.02, z - .14], [.74, .48, .06], [.05, .06, .09], 0, 0, NA); cube([xx, -1.02, z - .1], [.64, .38, .02], ICE, 1.25, 0, NA);
+}); });
+for (i = 0; i < 48; i++) { var from = [R(-22, 22), R(1, 11), R(2, 26)], hit = [R(-10.2, 10.2), R(-1.5, 4.4), -11.6]; if (Math.abs(hit[0]) < 1.9 && hit[1] < .8) hit[0] += hit[0] < 0 ? -2.2 : 2.2; cube(from, [.17, .17, .17], RED, 2.4, 2, 1.45, 3.4, hit, R(.07, .15), rnd()); }
+for (i = 0; i < 10; i++) { var g = [R(-.8, .8), R(-1.5, -.2), -12], rk = RACKS[i % 6], spd = R(.08, .13), ph = rnd(); cube([R(-9, 9), R(1, 7), R(6, 20)], [.13, .13, .13], WHITE, 1.6, 1, 1.5, 99, g, spd, ph); cube(g, [.13, .13, .13], WHITE, 1.6, 1, 1.5, 99, [rk[0] * .8, R(-1.4, .2), rk[1]], spd, ph); }
+var PATH = [[4,1.2,8],[1.6,-.6,-4],[0,-1.3,-12],[0,-1.7,-17],[-2.6,-1.7,-17],[-2.6,-1.7,-25],[-2.6,-1.7,-29],[0,-1.7,-29],[0,-1.7,-31.5]], cum = [0];
+for (i = 1; i < PATH.length; i++) cum[i] = cum[i-1] + Math.hypot(PATH[i][0]-PATH[i-1][0], PATH[i][1]-PATH[i-1][1], PATH[i][2]-PATH[i-1][2]);
+for (i = 0; i < PATH.length - 1; i++) { var n = Math.ceil((cum[i+1] - cum[i]) / .34), m; for (m = 0; m < n; m++) { var u0 = (m + .5) / n; cube([lerp(PATH[i][0], PATH[i+1][0], u0), lerp(PATH[i][1], PATH[i+1][1], u0), lerp(PATH[i][2], PATH[i+1][2], u0)], [.15, .15, .15], RED, 2.8, 5, 0, lerp(cum[i], cum[i+1], u0) / cum[cum.length-1]); } }
+cube([-3.4, -.7, -17], [1.32, 2.72, 1.32], RED, .9, 0, 3.38, 4.5);
+for (i = 0; i < 9; i++) cube([R(-.5, .5), R(-1.9, -1.2), -29.6], [.15, .15, .15], RED, 2.4, 2, 3.72, 4.4, [R(-.6, .6), R(-1.9, -.7), -31.7], R(.5, .9), rnd());
+var XN = [0, 5.2, -46], BAD = WS[10];
+cube(XN, [1.15, 1.15, 1.15], GOLD, 1.3, 4, 3.85, 99, XN, .7, 0);
+for (i = 0; i < 14; i++) cube([XN[0] + Math.cos(i / 14 * 6.2832) * 2.1, XN[1], XN[2] + Math.sin(i / 14 * 6.2832) * 2.1], [.26, .26, .26], GOLD, 1.7, 4, 3.85, 99, XN, -.45, 0);
+WS.forEach(function(w){ for (q = 0; q < 3; q++) cube(XN, [.09, .09, .09], GOLD, 2.4, 1, 4.05, 99, w, R(.3, .5), q / 3 + rnd() * .2); });
+cube([BAD[0], -1.25, BAD[2]], [1.3, 1.15, 1.05], RED, 1.2, 0, 4.2, 4.74);
+(function(){ var cx = BAD[0], cy = -1.2, cz = BAD[2], h = .9, e = .05, a, b;
+  for (a = -1; a <= 1; a += 2) for (b = -1; b <= 1; b += 2) { cube([cx + a * h, cy, cz + b * h], [e, h * 2, e], GOLD, 2, 0, 4.62); cube([cx, cy + a * h, cz + b * h], [h * 2, e, e], GOLD, 2, 0, 4.62); cube([cx + a * h, cy + b * h, cz], [e, e, h * 2], GOLD, 2, 0, 4.62); } })();
+
+/* ---------------- GL ---------------- */
+var VS = '#version 300 es\nprecision highp float;\n' +
+'layout(location=0) in vec3 aP; layout(location=1) in vec3 aN;\n' +
+'layout(location=2) in vec3 iA; layout(location=3) in vec3 iB; layout(location=4) in vec3 iS; layout(location=5) in vec3 iC; layout(location=6) in vec4 iK; layout(location=7) in vec2 iT;\n' +
+'uniform mat4 uVP; uniform float uTime; uniform float uAct; uniform float uPath; uniform float uGlow;\n' +
+'out vec3 vN; out vec3 vW; out vec3 vC; out vec3 vL; out float vE; out float vK;\n' +
+'void main(){\n' +
+'  float kind = iK.y, em = iK.x;\n' +
+'  float vis = (kind > 4.5 && kind < 5.5) ? step(iT.y, uPath) * (1. - smoothstep(4.55, 4.95, uAct)) : smoothstep(iT.x, iT.x + .25, uAct) * (1. - smoothstep(iT.y - .25, iT.y, uAct));\n' +
+'  vec3 pos = iA, sc = iS, n = aN, wp;\n' +
+'  if (kind > .5 && kind < 2.5) {\n' +
+'    float t = fract(uTime * iK.z + iK.w); pos = mix(iA, iB, t); vis *= smoothstep(0., .08, t);\n' +
+'    if (kind > 1.5) { float hit = smoothstep(.9, 1., t); sc *= 1. + hit * 1.8; em *= 1. + hit * 3.; } else vis *= smoothstep(1., .93, t);\n' +
+'  }\n' +
+'  sc *= vis; if (uGlow > .5) sc *= 1.9;\n' +
+'  if (kind > 2.5 && kind < 3.5) {\n' +
+'    vec3 up = normalize(iA), tx = normalize(cross(vec3(0., 1., 0.), up)), tz = cross(up, tx), l = aP * sc;\n' +
+'    wp = iA + tx * l.x + up * l.y + tz * l.z; n = tx * aN.x + up * aN.y + tz * aN.z;\n' +
+'  } else if (kind > 3.5 && kind < 4.5) {\n' +
+'    float a = uTime * iK.z + iK.w, c = cos(a), s = sin(a); vec3 rr = iA - iB, l = aP * sc;\n' +
+'    wp = iB + vec3(c * rr.x + s * rr.z, rr.y, c * rr.z - s * rr.x) + vec3(c * l.x + s * l.z, l.y, c * l.z - s * l.x); n = vec3(c * aN.x + s * aN.z, aN.y, c * aN.z - s * aN.x);\n' +
+'  } else wp = pos + aP * sc;\n' +
+'  vN = n; vW = wp; vC = iC; vL = aP; vE = em; vK = kind;\n' +
+'  gl_Position = (vis < .01 || (uGlow > .5 && em < .8)) ? vec4(2., 2., 2., 1.) : uVP * vec4(wp, 1.);\n' +
+'}';
+var FS = '#version 300 es\nprecision highp float;\n' +
+'in vec3 vN; in vec3 vW; in vec3 vC; in vec3 vL; in float vE; in float vK;\n' +
+'uniform vec3 uEye; uniform float uDim; uniform float uTime; uniform float uGlow;\n' +
+'out vec4 o;\n' +
+'float hash(vec2 p){ return fract(sin(dot(p, vec2(41.3, 289.1))) * 45758.5); }\n' +
+'void main(){\n' +
+'  if (uGlow > .5) { o = vec4(vC * vE * .075 * uDim, 1.); return; }\n' +
+'  vec3 n = normalize(vN), v = normalize(uEye - vW);\n' +
+'  float d1 = max(dot(n, normalize(vec3(.45, .8, .4))), 0.), d2 = max(dot(n, normalize(vec3(-.6, .25, -.5))), 0.);\n' +
+'  float fr = pow(1. - max(dot(n, v), 0.), 3.);\n' +
+'  vec3 a = abs(vL) * 2.; float e = smoothstep(.88, .98, a.x) + smoothstep(.88, .98, a.y) + smoothstep(.88, .98, a.z), edge = clamp(e - 1., 0., 1.);\n' +
+'  vec3 col = vC * (.12 + d1 * .9 + d2 * .3) + vec3(.3, .55, 1.) * fr * .25 + vC * edge * .5 + vC * vE;\n' +
+'  if (vK > 5.5 && vK < 6.5) { vec2 g = abs(fract(vW.xz * .5) - .5); col += vec3(.12, .36, .9) * smoothstep(.46, .5, max(g.x, g.y)) * .5 * step(.5, n.y); }\n' +
+'  if (vK > 6.5) { vec2 id = floor(vec2(vW.y * 5., vW.x * 3. + vW.z * 3.));\n' +
+'    float led = step(.55, fract(vW.y * 5.)) * step(.6, hash(id + floor(uTime * 1.5 + hash(id) * 8.))) * step(abs(n.y), .5);\n' +
+'    col += mix(vec3(.2, .9, .6), vec3(.3, .6, 1.), hash(id * 1.7)) * led * .9; }\n' +
+'  col = mix(vec3(.01, .018, .04), col, exp(-length(uEye - vW) * .017));\n' +
+'  o = vec4(col * uDim, 1.);\n' +
+'}';
+function sh(type, src){ var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
+var P, U = {}, NI = I.length / 18;
+try {
+  P = gl.createProgram(); gl.attachShader(P, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(P, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(P);
+  if (!gl.getProgramParameter(P, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(P));
+  ['uVP', 'uTime', 'uAct', 'uPath', 'uGlow', 'uEye', 'uDim'].forEach(function(nm){ U[nm] = gl.getUniformLocation(P, nm); });
+  var M = [];
+  [[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[-1,0,0],[0,1,0]],[[1,0,0],[0,0,-1],[0,1,0]],[[-1,0,0],[0,0,1],[0,1,0]],[[0,1,0],[1,0,0],[0,0,-1]],[[0,-1,0],[1,0,0],[0,0,1]]].forEach(function(f){
+    var nn = f[0], uu = f[1], vv = f[2];
+    [[-1,-1],[1,-1],[1,1],[-1,-1],[1,1],[-1,1]].forEach(function(k){ M.push((nn[0] + uu[0]*k[0] + vv[0]*k[1]) * .5, (nn[1] + uu[1]*k[0] + vv[1]*k[1]) * .5, (nn[2] + uu[2]*k[0] + vv[2]*k[1]) * .5, nn[0], nn[1], nn[2]); });
+  });
+  gl.bindVertexArray(gl.createVertexArray());
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(M), gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 24, 0); gl.enableVertexAttribArray(1); gl.vertexAttribPointer(1, 3, gl.FLOAT, false, 24, 12);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(I), gl.STATIC_DRAW);
+  [[2,3,0],[3,3,12],[4,3,24],[5,3,36],[6,4,48],[7,2,64]].forEach(function(k){ gl.enableVertexAttribArray(k[0]); gl.vertexAttribPointer(k[0], k[1], gl.FLOAT, false, 72, k[2]); gl.vertexAttribDivisor(k[0], 1); });
+  gl.useProgram(P);
+} catch (err) { flat(); if (window.console) console.warn('World disabled:', err); return; }
+gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL); gl.blendFunc(gl.ONE, gl.ONE);
+
+function persp(fov, asp, n, f){ var t = 1 / Math.tan(fov / 2); return [t / asp,0,0,0, 0,t,0,0, 0,0,(f + n) / (n - f),-1, 0,0,2 * f * n / (n - f),0]; }
+function lookAt(e, t){
+  var fx = t[0]-e[0], fy = t[1]-e[1], fz = t[2]-e[2], fl = Math.hypot(fx, fy, fz) || 1; fx /= fl; fy /= fl; fz /= fl;
+  var sx = -fz, sz = fx, sl = Math.hypot(sx, sz) || 1; sx /= sl; sz /= sl;
+  var ux = -sz * fy, uy = sz * fx - sx * fz, uz = sx * fy;
+  return [sx,ux,-fx,0, 0,uy,-fy,0, sz,uz,-fz,0, -(sx*e[0] + sz*e[2]), -(ux*e[0] + uy*e[1] + uz*e[2]), fx*e[0] + fy*e[1] + fz*e[2], 1];
+}
+function mul(a, b){ var o = new Float32Array(16), ii, jj, kk, s; for (ii = 0; ii < 4; ii++) for (jj = 0; jj < 4; jj++) { s = 0; for (kk = 0; kk < 4; kk++) s += a[kk * 4 + jj] * b[ii * 4 + kk]; o[ii * 4 + jj] = s; } return o; }
+
+/* the shot list: time on the film's clock, camera, what it looks at, exposure */
+var CAM = [
+  [0,    [3.6, 4.4, 14.4],  [0, .2, 0],        1],
+  [.85,  [5.8, 5.6, 9.6],   TGT,               1],
+  [1.25, [3.5, 3.8, 5.8],   TGT,               1],
+  [1.7,  [10, 6, 16],       [0, 1.2, -12],     1],
+  [2.5,  [7, 2.8, -1],      [-1, 2.4, -12],    1],
+  [3.5,  [9, 7.4, -13.5],   [-1.6, -.6, -27],  1],
+  [4.5,  [9.5, 7.6, -34],   [1.2, 3.3, -47],   1],
+  [5,    [3, 21, -16],      [0, 0, -36],       1],
+  [6,    [30, 20, -30],     [0, -5, -30],      1.1]
+];
+/* the last shot is framed for the screen: a side-on diorama when wide, down the corridor when tall */
+function camFit(){ var a = window.innerWidth / Math.max(1, window.innerHeight), k = CAM[CAM.length - 1], f = clamp(1.6 / a, 1, 1.5); if (a < 1) { k[1] = [0, 26, 14]; k[2] = [0, 0, -16]; } else { k[1] = [30 * f, 20 * f, -30]; k[2] = [0, -5, -30]; } }
+camFit(); window.addEventListener('resize', camFit);
+var NAMES = ['Reconnaissance', 'The attempt', 'FortiGate', 'Palo Alto', 'XDR'];
+var LOGOS = [{ id: 'filmFg', p: [0, 6.6, -12], a: 1.85, b: 3.3 }, { id: 'filmPa', p: [0, 5.4, -32], a: 3.05, b: 4.3 }, { id: 'filmXdr', p: [0, 8.2, -46], a: 4.0, b: 5.4 }, { id: 'filmZ0', p: [0, 6, -2], a: 1.45, b: 2.3, s: 1.3 }, { id: 'filmZ1', p: [3.4, 4, -21], a: 3.3, b: 3.78, s: 1.3 }, { id: 'filmZ3', p: [3, .8, -48], a: 4.62, b: 5.2, s: 1.3 }, { id: 'filmM0', p: [0, 5, -12], a: 5.5, b: 9, s: 9 }, { id: 'filmM1', p: [3.4, 2.6, -21], a: 5.58, b: 9, s: 9 }, { id: 'filmM2', p: [0, 5, -32], a: 5.66, b: 9, s: 9 }, { id: 'filmM3', p: [0, 6.6, -46], a: 5.74, b: 9, s: 9 }];
+LOGOS.forEach(function(l){ l.el = document.getElementById(l.id); l.on = false; });
+var acts = film ? Array.prototype.slice.call(film.querySelectorAll('.film__act')) : [], bar = film ? film.querySelector('.film__bar i') : null, actAt = -1;
+var slate = document.createElement('div'); slate.className = 'slate'; slate.setAttribute('aria-hidden', 'true');
+var slScene = document.createElement('span'), slTc = document.createElement('span'); slate.appendChild(slScene); slate.appendChild(slTc); document.body.appendChild(slate);
+var slAt = '', tcAt = '';
+function two(v){ return (v < 10 ? '0' : '') + v; }
+
+var W = 0, H = 0, CW = 1, CH = 1, dpr = 1, maxDpr = window.innerWidth < 760 ? 1.5 : 1.6, seen = 0, warm = 0, lite = 0, secs = [], filmTop = 0, filmSpan = 1;
+function measure(){
+  var y = window.scrollY, vh = window.innerHeight, fr;
+  secs = Array.prototype.map.call(document.querySelectorAll('.sec[data-key]'), function(el){ var b = el.getBoundingClientRect(); return b.top + y + Math.min(b.height, vh * 1.2) * .5 - vh * .5; });
+  if (film) { fr = film.getBoundingClientRect(); filmTop = fr.top + y; filmSpan = Math.max(1, fr.height - vh); }
+  dpr = Math.min(window.devicePixelRatio || 1, maxDpr);
+  CW = cv.clientWidth || 1; CH = cv.clientHeight || 1;
+  var w = Math.max(2, Math.round(CW * dpr)), h = Math.max(2, Math.round(CH * dpr));
+  if (w !== W || h !== H) { W = w; H = h; cv.width = w; cv.height = h; }
+}
+measure();
+window.addEventListener('resize', measure); window.addEventListener('load', measure);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ setTimeout(measure, 60); });
+var mouse = { x: 0, y: 0, sx: 0, sy: 0 };
+window.addEventListener('pointermove', function(e){ if (e.pointerType === 'mouse') { mouse.x = e.clientX / window.innerWidth * 2 - 1; mouse.y = e.clientY / window.innerHeight * 2 - 1; } }, { passive: true });
+
+var T = 0, t0 = performance.now(), tick = 0, lastT = 0, slow = 16;
+/* one throwaway draw at start-up compiles the shaders and uploads the buffers while the hero is still animating in */
+function drawWarm(){ var I4 = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]; gl.viewport(0, 0, W, H); gl.uniformMatrix4fv(U.uVP, false, I4); gl.uniform1f(U.uGlow, 0); gl.drawArraysInstanced(gl.TRIANGLES, 0, 36, NI); gl.uniform1f(U.uGlow, 1); gl.drawArraysInstanced(gl.TRIANGLES, 0, 36, NI); gl.clearColor(.01, .018, .04, 1); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); }
+function frame(now){
+  requestAnimationFrame(frame);
+  if (document.hidden) return;
+  if ((++tick & 63) === 0) measure();
+  var dt = now - lastT, k, j; lastT = now;
+  /* where the scroll bar is on the film's clock */
+  var y = window.scrollY, n = secs.length, tt;
+  tt = clamp((y - filmTop) / filmSpan, 0, 1) * 6;
+  if ((y < filmTop - window.innerHeight * 1.03 || y > filmTop + filmSpan + window.innerHeight * 1.03) && (warm || now < 900)) return;
+  if (!warm) { warm = 1; lastT = now; return drawWarm(); }
+  /* step the resolution down if this device cannot hold the frame rate */
+  if (dt < 250) { slow = slow * .92 + dt * .08; if (++seen > 50 && slow > 25 && !window.__keepFx) { if (maxDpr > .8) { maxDpr = maxDpr > 1.3 ? 1.2 : maxDpr > 1 ? 1 : .8; measure(); } else lite = 1; seen = 0; slow = 16; } }
+  T = reduce ? tt : lerp(T, tt, 1 - Math.exp(-Math.min(dt, 100) / 190));
+  for (k = 0; k < CAM.length - 2 && T >= CAM[k + 1][0]; k++) {}
+  var A = CAM[k], B = CAM[k + 1], m = smooth((T - A[0]) / (B[0] - A[0])), time = reduce ? 6 : (now - t0) / 1000, asp = W / H;
+  mouse.sx = lerp(mouse.sx, mouse.x, .05); mouse.sy = lerp(mouse.sy, mouse.y, .05);
+  var orbit = (1 - smooth(T / .8)) * (reduce ? 0 : time * .05), co = Math.cos(orbit), so = Math.sin(orbit);
+  var ex = lerp(A[1][0], B[1][0], m), ez = lerp(A[1][2], B[1][2], m);
+  var eye = [co * ex + so * ez + mouse.sx * .7, lerp(A[1][1], B[1][1], m) - mouse.sy * .45 + Math.sin(time * .3) * .12, co * ez - so * ex + (asp < 1 ? 5 : 0)];
+  var tgt = [lerp(A[2][0], B[2][0], m), lerp(A[2][1], B[2][1], m), lerp(A[2][2], B[2][2], m)], dim = lerp(A[3], B[3], m);
+  var V = lookAt(eye, tgt), Pm = persp(asp < 1 ? 1.15 : .88, asp, .1, 400);
+  gl.viewport(0, 0, W, H); gl.clearColor(.01 * dim, .018 * dim, .04 * dim, 1); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  gl.uniformMatrix4fv(U.uVP, false, mul(Pm, V)); gl.uniform1f(U.uTime, time); gl.uniform1f(U.uAct, T); gl.uniform1f(U.uPath, clamp((T - 3) / .78, 0, 1));
+  gl.uniform3fv(U.uEye, eye); gl.uniform1f(U.uDim, dim);
+  gl.disable(gl.BLEND); gl.depthMask(true); gl.uniform1f(U.uGlow, 0); gl.drawArraysInstanced(gl.TRIANGLES, 0, 36, NI);
+  if (!lite) { gl.enable(gl.BLEND); gl.depthMask(false); gl.uniform1f(U.uGlow, 1); gl.drawArraysInstanced(gl.TRIANGLES, 0, 36, NI); }
+
+  /* vendor emblems (DOM) pinned to their places in the scene */
+  var cw = CW, ch = CH;
+  for (j = 0; j < LOGOS.length; j++) {
+    var l = LOGOS[j]; if (!l.el) continue;
+    var p = l.p, vx = V[0]*p[0] + V[4]*p[1] + V[8]*p[2] + V[12], vy = V[1]*p[0] + V[5]*p[1] + V[9]*p[2] + V[13], vz = V[2]*p[0] + V[6]*p[1] + V[10]*p[2] + V[14];
+    var o = vz < -2 ? smooth((T - l.a) / .25) * (1 - smooth((T - l.b + .25) / .25)) : 0;
+    if (o > .01) { var d = -vz; l.el.style.transform = 'translate(' + ((Pm[0] * vx / d * .5 + .5) * cw).toFixed(1) + 'px,' + ((.5 - Pm[5] * vy / d * .5) * ch).toFixed(1) + 'px) translate(-50%,-50%) scale(' + clamp(13 / d * (l.s || 1), l.s ? .74 : .34, l.s ? 1 : 1.25).toFixed(3) + ')'; }
+    if (l.o !== o) { l.o = o; l.el.style.opacity = o.toFixed(2); }
+    if ((o > .01) !== l.on) { l.on = o > .01; l.el.classList.toggle('is-off', !l.on); }
+  }
+  var at = clamp(Math.floor(T + .08), 0, acts.length - 1);
+  if (at !== actAt) { actAt = at; acts.forEach(function(el, qq){ el.classList.toggle('is-on', qq === at); }); var st = document.getElementById('filmStatus'); if (st) { st.textContent = ['Scanning', 'Under attack', 'Perimeter holding', 'Breach in the DMZ', 'Endpoint isolated', 'Reported'][at] || ''; st.setAttribute('data-s', at); } Array.prototype.forEach.call(film.querySelectorAll('.film__node'), function(el, qq){ el.classList.toggle('is-on', qq === at); el.classList.toggle('is-done', qq < at); }); }
+  if (bar) bar.style.transform = 'scaleX(' + clamp(T / 6, 0, 1).toFixed(4) + ')';
+}
+requestAnimationFrame(frame);
+})();
+
+/* code samples type themselves when they come into view */
+(function(){
+  var pres = Array.prototype.slice.call(document.querySelectorAll('.snip')), logs = Array.prototype.slice.call(document.querySelectorAll('.film__log')), reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  pres.concat(logs).forEach(function(pre){ pre.innerHTML = pre.innerHTML.split('\n').map(function(l, i){ return '<span class="ln" style="--i:' + i + '">' + (l || ' ') + '</span>'; }).join(''); });
+  if (!('IntersectionObserver' in window) || reduce) return;
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ e.target.classList.toggle('is-typing', e.isIntersecting); }); }, { threshold: .35 });
+  pres.forEach(function(pre){ pre.classList.add('rdy'); io.observe(pre); });
+})();
+
+/* the rail under the film jumps to an act */
+(function(){
+  var film = document.getElementById('film'); if (!film) return;
+  Array.prototype.forEach.call(film.querySelectorAll('.film__node'), function(b, i){ b.addEventListener('click', function(){
+    var r = film.getBoundingClientRect(), span = Math.max(1, r.height - window.innerHeight);
+    window.scrollTo({ top: r.top + window.pageYOffset + span * (i + .45) / 6, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }); });
+})();
+
+/* firewall: the first rule that matches decides */
+(function(){
+  var host = document.getElementById('fw'); if (!host) return;
+  var q = function(s){ return Array.prototype.slice.call(host.querySelectorAll(s)); }, rules = q('.fw__rule'), btns = q('.fw__pkt'), verdict = document.getElementById('fwVerdict'), run = 0, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var P = [[0, 1, 'Public web traffic reaches web-01 and is inspected by the IPS on the way in.'], [5, 0, 'Nothing allows the internet to reach the database, so the default deny catches it and logs it.'], [1, 1, 'Admins come in over the VPN and land on the jump host, never straight on a server.'],
+           [4, 0, 'Guest Wi-Fi is cut off from the internal network before any broader rule can match.'], [2, 1, 'Only web-01 may talk to the database, and only on the MySQL port.'], [5, 0, 'SSH from the internet matches no allow rule. Admin access exists only through the VPN.']];
+  function settle(p){ rules.forEach(function(r, i){ r.classList.remove('is-scan'); r.classList.toggle('is-miss', i < p[0]); r.classList.toggle('is-hit', i === p[0]); r.classList.toggle('is-deny', i === p[0] && !p[1]); }); verdict.innerHTML = '<b class="' + (p[1] ? 'a">Allowed' : 'd">Dropped') + '</b> by rule ' + (p[0] + 1) + '. ' + p[2]; }
+  btns.forEach(function(b, idx){ b.addEventListener('click', function(){
+    var p = P[idx], id = ++run, i = 0;
+    btns.forEach(function(x, k){ x.setAttribute('aria-pressed', k === idx ? 'true' : 'false'); });
+    rules.forEach(function(r){ r.classList.remove('is-scan', 'is-miss', 'is-hit', 'is-deny'); });
+    if (reduce) { settle(p); return; }
+    (function step(){ if (id !== run) return; rules.forEach(function(r, k){ r.classList.toggle('is-scan', k === i); r.classList.toggle('is-miss', k < i); }); verdict.textContent = 'Checking rule ' + (i + 1); if (i === p[0]) { setTimeout(function(){ if (id === run) settle(p); }, 260); return; } i++; setTimeout(step, 170); })();
+  }); });
+})();
+
+/* sections far from the screen sleep: no animations, no 3D layers, nothing for the GPU to carry */
+(function(){
+  var list = Array.prototype.slice.call(document.querySelectorAll('section[id], .ribbons'));
+  if (!('IntersectionObserver' in window)) { list.forEach(function(s){ s.classList.remove('zz'); }); return; }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ e.target.classList.toggle('zz', !e.isIntersecting); }); }, { rootMargin: '80% 0px 80% 0px' });
+  list.forEach(function(s){ io.observe(s); });
+  var hero = document.getElementById('top'); if (hero) setTimeout(function(){ hero.classList.add('seen'); }, 4200);
 })();
 </script>
 </body>
